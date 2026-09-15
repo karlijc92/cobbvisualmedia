@@ -73,7 +73,6 @@
   .custom-btn { border: 1px solid var(--ink); padding: 13px 26px; border-radius: 30px; font-weight: 600; font-size: 14px; white-space: nowrap; background: none; cursor: pointer; font-family: 'DM Sans', sans-serif; color: var(--ink); }
   .custom-btn:hover { background: var(--ink); color: var(--paper); }
 
-  /* Quote form */
   .quote-form-section { padding-top: 90px; border-top: 1px solid var(--line); }
   .quote-form-head { max-width: 580px; margin-bottom: 40px; }
   .quote-form-head h2 { font-size: 30px; margin-bottom: 12px; }
@@ -145,4 +144,125 @@
         <div class="plan-name">Business Suite</div>
         <div class="plan-for">For retail, office, and commercial real estate listings.</div>
         <div class="plan-price">Starting at $800</div>
-        <div
+        <div class="plan-price-note">Final quote based on property size &amp; photos</div>
+        <ul class="plan-includes">
+          <li>Cinematic walkthrough video</li>
+          <li>Built from your existing photos — or we can source/style them</li>
+          <li>Delivered ready for leasing decks and listings</li>
+        </ul>
+        <button type="button" class="plan-btn" onclick="preselect('Business Suite')">Request This Suite</button>
+      </div>
+
+      <div class="plan">
+        <div class="plan-tag">Boutique &amp; Luxury</div>
+        <div class="plan-name">Signature Suite</div>
+        <div class="plan-for">For high-end properties and boutique hospitality.</div>
+        <div class="plan-price">Starting at $1,800</div>
+        <div class="plan-price-note">Final quote based on property size &amp; photos</div>
+        <ul class="plan-includes">
+          <li>Premium cinematic walkthrough video</li>
+          <li>Built from your existing photos — or we can source/style them</li>
+          <li>Delivered ready for premium marketing use</li>
+        </ul>
+        <button type="button" class="plan-btn" onclick="preselect('Signature Suite')">Request This Suite</button>
+      </div>
+    </div>
+
+    <div class="custom-note">
+      <div>
+        <h3>Not sure which suite fits?</h3>
+        <p>Describe the property in the form below and we'll tell you what fits — no wrong answer.</p>
+      </div>
+      <button type="button" class="custom-btn" onclick="preselect('Not sure / Custom')">Ask About Your Property</button>
+    </div>
+  </div>
+</section>
+
+<section class="section quote-form-section" id="quote-form">
+  <div class="wrap">
+    <div class="quote-form-head">
+      <h2>Request your quote.</h2>
+      <p>Fill this out and you'll get an exact price back by email — no obligation, no charge until you approve it.</p>
+    </div>
+
+    <form class="quote-form" action="https://formsubmit.co/karlicobb@cobbvisualmedia.com" method="POST">
+      <input type="hidden" name="_subject" value="New Quote Request - Cobb Visual Media">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="table">
+
+      <div class="form-row">
+        <div class="form-field">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="Name" required>
+        </div>
+        <div class="form-field">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="Email" required>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-field">
+          <label for="suite">Suite</label>
+          <select id="suite" name="Suite">
+            <option value="STR Suite">STR Suite — Short-Term Rental</option>
+            <option value="Business Suite">Business Suite — Commercial</option>
+            <option value="Signature Suite">Signature Suite — Boutique &amp; Luxury</option>
+            <option value="Not sure / Custom">Not sure / Custom</option>
+          </select>
+        </div>
+        <div class="form-field">
+          <label for="rooms">Property size</label>
+          <span class="hint">Rooms / spaces to feature</span>
+          <input type="text" id="rooms" name="Property Size" placeholder="e.g. 3 bedrooms, living area, patio">
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-field">
+          <label for="timeline">Needed by</label>
+          <input type="text" id="timeline" name="Timeline" placeholder="e.g. within 2 weeks">
+        </div>
+        <div class="form-field">
+          <label for="photos">Link to existing photos</label>
+          <span class="hint">Google Drive, Dropbox, listing URL, etc.</span>
+          <input type="text" id="photos" name="Photo Link">
+        </div>
+      </div>
+
+      <div class="checkbox-row">
+        <input type="checkbox" id="need-photos" name="Needs Photos Sourced" value="Yes">
+        <label for="need-photos">I don't have photos yet and need help sourcing/styling them</label>
+      </div>
+
+      <div class="form-field">
+        <label for="notes">Anything else we should know?</label>
+        <textarea id="notes" name="Notes" placeholder="Property type, style, special requests..."></textarea>
+      </div>
+
+      <button type="submit" class="form-submit">Request My Quote</button>
+      <p class="form-note">You'll receive a firm quote by email, followed by a secure payment link once approved.</p>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-logo">Cobb Visual Media</div>
+    <div class="footer-links">
+      <a href="mailto:karlicobb@cobbvisualmedia.com">Contact</a>
+      <a href="terms.html">Terms</a>
+      <a href="privacy.html">Privacy</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  function preselect(suiteName) {
+    document.getElementById('suite').value = suiteName;
+    document.getElementById('quote-form').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+</script>
+
+</body>
+</html>
