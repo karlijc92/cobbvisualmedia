@@ -46,7 +46,7 @@
 
   header.page-head { padding: 70px 0 50px 0; }
   header.page-head h1 { font-size: 42px; margin-bottom: 16px; max-width: 620px; }
-  header.page-head p { font-size: 16px; color: var(--muted); max-width: 520px; }
+  header.page-head p { font-size: 16px; color: var(--muted); max-width: 540px; }
 
   .section { padding: 0 0 90px 0; }
 
@@ -56,11 +56,12 @@
   .plan-tag { font-size: 13px; color: var(--sky); margin-bottom: 14px; font-weight: 600; }
   .plan-name { font-family: 'DM Serif Display', serif; font-size: 21px; margin-bottom: 10px; }
   .plan-for { font-size: 13.5px; color: var(--muted); margin-bottom: 24px; min-height: 40px; }
-  .plan-price { font-family: 'DM Serif Display', serif; font-size: 38px; margin-bottom: 24px; }
+  .plan-price { font-family: 'DM Serif Display', serif; font-size: 30px; margin-bottom: 6px; }
+  .plan-price-note { font-size: 12px; color: var(--muted); margin-bottom: 24px; }
   .plan-includes { list-style: none; margin-bottom: 28px; flex-grow: 1; }
   .plan-includes li { font-size: 14px; color: var(--ink); padding: 9px 0; border-top: 1px solid var(--line); }
   .plan-includes li:first-child { border-top: none; }
-  .plan-btn { display: block; text-align: center; padding: 13px; border-radius: 30px; background: var(--ink); color: var(--paper); font-weight: 600; font-size: 14px; }
+  .plan-btn { display: block; text-align: center; padding: 13px; border-radius: 30px; background: var(--ink); color: var(--paper); font-weight: 600; font-size: 14px; cursor: pointer; border: none; width: 100%; font-family: 'DM Sans', sans-serif; }
   .plan-btn:hover { opacity: 0.85; }
 
   .custom-note {
@@ -69,8 +70,35 @@
   }
   .custom-note h3 { font-size: 19px; margin-bottom: 6px; }
   .custom-note p { font-size: 14px; color: var(--muted); max-width: 420px; }
-  .custom-btn { border: 1px solid var(--ink); padding: 13px 26px; border-radius: 30px; font-weight: 600; font-size: 14px; white-space: nowrap; }
+  .custom-btn { border: 1px solid var(--ink); padding: 13px 26px; border-radius: 30px; font-weight: 600; font-size: 14px; white-space: nowrap; background: none; cursor: pointer; font-family: 'DM Sans', sans-serif; color: var(--ink); }
   .custom-btn:hover { background: var(--ink); color: var(--paper); }
+
+  /* Quote form */
+  .quote-form-section { padding-top: 90px; border-top: 1px solid var(--line); }
+  .quote-form-head { max-width: 580px; margin-bottom: 40px; }
+  .quote-form-head h2 { font-size: 30px; margin-bottom: 12px; }
+  .quote-form-head p { font-size: 15px; color: var(--muted); }
+
+  .quote-form { background: var(--panel); border: 1px solid var(--line); border-radius: 16px; padding: 40px; max-width: 680px; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px; }
+  @media (max-width: 600px) { .form-row { grid-template-columns: 1fr; } }
+  .form-field { display: flex; flex-direction: column; gap: 6px; margin-bottom: 20px; }
+  .form-field label { font-size: 13px; font-weight: 600; color: var(--ink); }
+  .form-field .hint { font-size: 12px; color: var(--muted); font-weight: 400; }
+  .form-field input, .form-field select, .form-field textarea {
+    font-family: 'DM Sans', sans-serif; font-size: 14px; padding: 12px 14px;
+    border: 1px solid var(--line); border-radius: 8px; background: var(--paper); color: var(--ink);
+  }
+  .form-field input:focus, .form-field select:focus, .form-field textarea:focus {
+    outline: none; border-color: var(--gold);
+  }
+  .form-field textarea { resize: vertical; min-height: 90px; }
+  .checkbox-row { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 24px; }
+  .checkbox-row input { margin-top: 3px; }
+  .checkbox-row label { font-size: 13.5px; color: var(--muted); }
+  .form-submit { background: var(--ink); color: var(--paper); border: none; padding: 15px 32px; border-radius: 30px; font-weight: 600; font-size: 15px; cursor: pointer; font-family: 'DM Sans', sans-serif; }
+  .form-submit:hover { opacity: 0.85; }
+  .form-note { font-size: 12.5px; color: var(--muted); margin-top: 14px; }
 
   footer { padding: 44px 0; border-top: 1px solid var(--line); }
   footer .wrap { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 18px; }
@@ -91,7 +119,7 @@
 <header class="page-head">
   <div class="wrap">
     <h1>Choose your suite.</h1>
-    <p>One flat rate per video, based on the type of property. Pick the suite that fits, or reach out about something custom.</p>
+    <p>Pricing depends on property size, photo count, and timeline. Here's where each suite starts — request a quote below and you'll get an exact number.</p>
   </div>
 </header>
 
@@ -102,60 +130,19 @@
         <div class="plan-tag">Short-Term Rental</div>
         <div class="plan-name">STR Suite</div>
         <div class="plan-for">For Airbnb, VRBO, and short-term rental listings.</div>
-        <div class="plan-price">$500</div>
+        <div class="plan-price">Starting at $400</div>
+        <div class="plan-price-note">Final quote based on property size &amp; photos</div>
         <ul class="plan-includes">
           <li>Cinematic walkthrough video</li>
-          <li>Built from your existing listing photos</li>
+          <li>Built from your existing photos — or we can source/style them</li>
           <li>Delivered ready for listing platforms and social</li>
         </ul>
-        <a href="mailto:karlicobb@cobbvisualmedia.com?subject=STR Suite Inquiry" class="plan-btn">Request This Suite</a>
+        <button type="button" class="plan-btn" onclick="preselect('STR Suite')">Request This Suite</button>
       </div>
 
       <div class="plan">
         <div class="plan-tag">Commercial</div>
         <div class="plan-name">Business Suite</div>
         <div class="plan-for">For retail, office, and commercial real estate listings.</div>
-        <div class="plan-price">$800</div>
-        <ul class="plan-includes">
-          <li>Cinematic walkthrough video</li>
-          <li>Built from your existing property photos</li>
-          <li>Delivered ready for leasing decks and listings</li>
-        </ul>
-        <a href="mailto:karlicobb@cobbvisualmedia.com?subject=Business Suite Inquiry" class="plan-btn">Request This Suite</a>
-      </div>
-
-      <div class="plan">
-        <div class="plan-tag">Boutique &amp; Luxury</div>
-        <div class="plan-name">Signature Suite</div>
-        <div class="plan-for">For high-end properties and boutique hospitality.</div>
-        <div class="plan-price">$1,800</div>
-        <ul class="plan-includes">
-          <li>Premium cinematic walkthrough video</li>
-          <li>Built from your existing property photos</li>
-          <li>Delivered ready for premium marketing use</li>
-        </ul>
-        <a href="mailto:karlicobb@cobbvisualmedia.com?subject=Signature Suite Inquiry" class="plan-btn">Request This Suite</a>
-      </div>
-    </div>
-
-    <div class="custom-note">
-      <div>
-        <h3>Not sure which suite fits?</h3>
-        <p>Reach out and describe the property — pricing can be discussed directly for anything outside the standard suites.</p>
-      </div>
-      <a href="mailto:karlicobb@cobbvisualmedia.com?subject=Custom Property Inquiry" class="custom-btn">Ask About Your Property</a>
-    </div>
-  </div>
-</section>
-
-<footer>
-  <div class="wrap">
-    <div class="footer-logo">Cobb Visual Media</div>
-    <div class="footer-links">
-      <a href="mailto:karlicobb@cobbvisualmedia.com">Contact</a>
-    </div>
-  </div>
-</footer>
-
-</body>
-</html>
+        <div class="plan-price">Starting at $800</div>
+        <div
