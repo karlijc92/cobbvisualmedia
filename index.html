@@ -48,35 +48,15 @@
   @media (max-width: 780px) { .nav-links { display: none; } }
 
   header.hero { padding: 80px 0 60px 0; }
-  .hero-grid { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 50px; align-items: center; }
-  @media (max-width: 900px) { .hero-grid { grid-template-columns: 1fr; } }
+  .hero-grid { display: block; max-width: 640px; }
 
   .hero h1 { font-size: 46px; line-height: 1.2; margin-bottom: 22px; }
-  .hero p.lead { font-size: 17px; color: var(--muted); max-width: 460px; margin-bottom: 32px; }
+  .hero p.lead { font-size: 17px; color: var(--muted); max-width: 540px; margin-bottom: 32px; }
   @media (max-width: 720px) { .hero h1 { font-size: 34px; } }
 
   .hero-cta-row { display: flex; gap: 14px; align-items: center; flex-wrap: wrap; }
   .btn-primary { background: var(--ink); color: var(--paper); padding: 15px 28px; border-radius: 30px; font-weight: 600; font-size: 15px; }
   .btn-ghost { border: 1px solid var(--line); color: var(--ink); padding: 15px 28px; border-radius: 30px; font-weight: 600; font-size: 15px; }
-
-  .collage { position: relative; height: 420px; }
-  .polaroid {
-    position: absolute; background: #fff; padding: 10px 10px 34px 10px;
-    box-shadow: 0 14px 30px rgba(36, 31, 26, 0.16); border-radius: 3px;
-  }
-  .polaroid .frame {
-    width: 100%; height: 100%; border-radius: 1px;
-    display: flex; align-items: center; justify-content: center;
-    font-family: 'DM Sans', sans-serif; font-size: 12px; color: rgba(255,255,255,0.85);
-    text-align: center; padding: 10px;
-  }
-  .p1 { width: 220px; height: 260px; top: 0; left: 20px; transform: rotate(-7deg); z-index: 2; }
-  .p1 .frame { background: linear-gradient(155deg, #E7B463, #C9793E); }
-  .p2 { width: 190px; height: 230px; top: 60px; left: 220px; transform: rotate(6deg); z-index: 3; }
-  .p2 .frame { background: linear-gradient(155deg, #6E97B4, #3F5F76); }
-  .p3 { width: 170px; height: 200px; top: 200px; left: 60px; transform: rotate(4deg); z-index: 1; }
-  .p3 .frame { background: linear-gradient(155deg, #93A583, #647457); }
-  @media (max-width: 900px) { .collage { height: 340px; } .p1{left:0;} .p2{left:170px;} .p3{left:40px; top:170px;} }
 
   .trust-strip { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 24px 0; }
   .trust-strip .wrap { display: flex; flex-wrap: wrap; gap: 12px 34px; justify-content: center; font-size: 13.5px; color: var(--muted); }
@@ -127,11 +107,6 @@
         <a href="quote.html" class="btn-primary">Get a Quote</a>
         <a href="#how-it-works" class="btn-ghost">See How It Works</a>
       </div>
-    </div>
-    <div class="collage">
-      <div class="polaroid p1"><div class="frame">Sample property photo</div></div>
-      <div class="polaroid p2"><div class="frame">Sample interior photo</div></div>
-      <div class="polaroid p3"><div class="frame">Sample detail shot</div></div>
     </div>
   </div>
 </header>
