@@ -150,6 +150,7 @@
       <input type="hidden" name="_captcha" value="false">
       <input type="hidden" name="_template" value="table">
       <input type="hidden" name="_next" value="https://www.cobbvisualmedia.com/quote.html?sent=1">
+      <input type="hidden" name="_autoresponse" value="Thanks for reaching out to Cobb Visual Media! We've received your quote request and are reviewing your project details now. You'll hear back from us by email with a firm quote and next steps. In the meantime, you can browse our work at https://www.cobbvisualmedia.com/#work">
       <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
 
       <div class="form-section">
@@ -158,12 +159,12 @@
           <label for="service">What do you need?</label>
           <select id="service" name="Service" required>
             <option value="" disabled selected>Choose a service</option>
-            <option value="property">Property Walkthrough (from $600)</option>
-            <option value="commercial">Commercial &amp; Business (from $800)</option>
-            <option value="venue">Venues &amp; Hospitality (from $900)</option>
-            <option value="golf">Golf Courses &amp; Recreation (from $1,200)</option>
-            <option value="sports">Sports &amp; Event Highlights (from $600)</option>
-            <option value="other">Something Else / Not Sure</option>
+            <option value="Property Walkthrough">Property Walkthrough (from $600)</option>
+            <option value="Commercial &amp; Business">Commercial &amp; Business (from $800)</option>
+            <option value="Venues &amp; Hospitality">Venues &amp; Hospitality (from $900)</option>
+            <option value="Golf Courses &amp; Recreation">Golf Courses &amp; Recreation (from $1,200)</option>
+            <option value="Sports &amp; Event Highlights">Sports &amp; Event Highlights (from $600)</option>
+            <option value="Something Else / Not Sure">Something Else / Not Sure</option>
           </select>
         </div>
 
@@ -190,14 +191,14 @@
           </div>
           <div class="form-field">
             <label for="timeline">Date or deadline</label>
-            <input type="text" id="timeline" name="Timeline" placeholder="e.g. event on June 14, or within 2 weeks">
+            <input type="text" id="timeline" name="Timeline" placeholder="e.g. event on June 14, or within 2 weeks" required>
           </div>
         </div>
 
         <div class="form-field">
           <label for="scope">Project size</label>
-          <span class="hint" id="scope-hint">Rooms, square footage, holes, event length, whatever helps us picture it.</span>
-          <input type="text" id="scope" name="Project Size" placeholder="Tell us the size or scope">
+          <span class="hint">Rooms, square footage, holes, event length, whatever helps us picture it.</span>
+          <input type="text" id="scope" name="Project Size" placeholder="Tell us the size or scope" required>
         </div>
 
         <div class="form-row">
@@ -235,7 +236,7 @@
         <div class="form-row">
           <div class="form-field">
             <label for="name">Name</label>
-            <input type="text" id="name" name="Name" autocomplete="name" required>
+            <input type="text" id="name" name="name" autocomplete="name" required>
           </div>
           <div class="form-field">
             <label for="business">Business or property name <span class="optional">(optional)</span></label>
@@ -245,7 +246,7 @@
         <div class="form-row">
           <div class="form-field">
             <label for="email">Email</label>
-            <input type="email" id="email" name="Email" autocomplete="email" required>
+            <input type="email" id="email" name="email" autocomplete="email" required>
           </div>
           <div class="form-field">
             <label for="phone">Phone <span class="optional">(optional)</span></label>
@@ -260,7 +261,7 @@
 
     <div class="success" role="status">
       <h2>Request received.</h2>
-      <p>Thanks for reaching out. We'll review your project and follow up by email with a quote and next steps.</p>
+      <p>Thanks for reaching out. A confirmation is on its way to your inbox, and we'll follow up with a quote and next steps.</p>
       <a href="index.html#work">Browse our work while you wait</a>
     </div>
   </div>
@@ -269,11 +270,11 @@
     <div class="side-card">
       <h3>Starting prices</h3>
       <ul class="price-list" id="price-list">
-        <li data-service="property">Property Walkthroughs <strong>$600</strong></li>
-        <li data-service="commercial">Commercial &amp; Business <strong>$800</strong></li>
-        <li data-service="venue">Venues &amp; Hospitality <strong>$900</strong></li>
-        <li data-service="golf">Golf Courses &amp; Recreation <strong>$1,200</strong></li>
-        <li data-service="sports">Sports &amp; Event Highlights <strong>$600</strong></li>
+        <li data-service="Property Walkthrough">Property Walkthroughs <strong>$600</strong></li>
+        <li data-service="Commercial &amp; Business">Commercial &amp; Business <strong>$800</strong></li>
+        <li data-service="Venues &amp; Hospitality">Venues &amp; Hospitality <strong>$900</strong></li>
+        <li data-service="Golf Courses &amp; Recreation">Golf Courses &amp; Recreation <strong>$1,200</strong></li>
+        <li data-service="Sports &amp; Event Highlights">Sports &amp; Event Highlights <strong>$600</strong></li>
         <li>Social Media Reels add-on <strong>$150</strong></li>
       </ul>
       <p class="side-note">Final pricing depends on size, length, and deliverables.</p>
@@ -281,8 +282,8 @@
     <div class="side-card">
       <h3>What happens next</h3>
       <ol class="next-steps">
-        <li><strong>We review your request</strong>and follow up with any quick questions.</li>
-        <li><strong>You get a firm quote</strong>with exactly what's included.</li>
+        <li><strong>You get an instant confirmation</strong>by email as soon as you submit.</li>
+        <li><strong>We send a firm quote</strong>with exactly what's included.</li>
         <li><strong>Approve and book</strong>with a secure payment link, then we get to work.</li>
       </ol>
     </div>
@@ -309,13 +310,22 @@
     var select = document.getElementById('service');
     var scope = document.getElementById('scope');
     var items = document.querySelectorAll('#price-list li[data-service]');
+
+    // Links from the homepage use short codes (?service=golf); map them to the full option names
+    var codes = {
+      property: 'Property Walkthrough',
+      commercial: 'Commercial & Business',
+      venue: 'Venues & Hospitality',
+      golf: 'Golf Courses & Recreation',
+      sports: 'Sports & Event Highlights',
+      other: 'Something Else / Not Sure'
+    };
     var placeholders = {
-      property: 'e.g. 3 bed / 2 bath, about 1,800 sq ft, backyard and patio',
-      commercial: 'e.g. 4,000 sq ft retail space, or a 60-second brand promo',
-      venue: 'e.g. ballroom, garden ceremony site, and 12 guest rooms',
-      golf: 'e.g. 18 holes plus clubhouse and banquet room',
-      sports: 'e.g. 2-hour tournament, highlight reel of top plays',
-      other: 'Tell us the size or scope'
+      'Property Walkthrough': 'e.g. 3 bed / 2 bath, about 1,800 sq ft, backyard and patio',
+      'Commercial & Business': 'e.g. 4,000 sq ft retail space, or a 60-second brand promo',
+      'Venues & Hospitality': 'e.g. ballroom, garden ceremony site, and 12 guest rooms',
+      'Golf Courses & Recreation': 'e.g. 18 holes plus clubhouse and banquet room',
+      'Sports & Event Highlights': 'e.g. 2-hour tournament, highlight reel of top plays'
     };
 
     function update() {
@@ -324,8 +334,8 @@
       items.forEach(function (li) { li.classList.toggle('active', li.getAttribute('data-service') === v); });
     }
 
-    var preset = params.get('service');
-    if (preset && placeholders[preset]) { select.value = preset; }
+    var preset = codes[params.get('service')];
+    if (preset) { select.value = preset; }
     select.addEventListener('change', update);
     update();
   })();
