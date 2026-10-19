@@ -4,37 +4,56 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Privacy Policy | Cobb Visual Media</title>
+<meta name="description" content="Privacy policy for Cobb Visual Media.">
+<meta name="robots" content="noindex">
 <style>
   @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@400;500;600;700&display=swap');
+
   * { margin: 0; padding: 0; box-sizing: border-box; }
+
   :root {
-    --paper: #FAF6EF; --panel: #FFFFFF; --ink: #241F1A;
-    --gold: #D9A441; --line: rgba(36, 31, 26, 0.14); --muted: #6B6259;
+    --paper: #FAF6EF;
+    --panel: #FFFFFF;
+    --ink: #241F1A;
+    --gold: #C9963B;
+    --sky-deep: #5B84A6;
+    --line: rgba(36, 31, 26, 0.14);
+    --muted: #6B6259;
   }
+
   body { background: var(--paper); color: var(--ink); font-family: 'DM Sans', sans-serif; line-height: 1.7; }
-  a { color: var(--gold); text-decoration: none; }
-  .wrap { max-width: 760px; margin: 0 auto; padding: 0 40px; }
-  h1, h2 { font-family: 'DM Serif Display', serif; font-weight: 400; }
-  nav {
-    position: sticky; top: 0; z-index: 100; background: rgba(250, 246, 239, 0.92);
-    backdrop-filter: blur(8px); border-bottom: 1px solid var(--line);
-  }
-  nav .wrap { display: flex; align-items: center; justify-content: space-between; padding: 22px 40px; max-width: 1120px; }
-  .nav-logo { font-family: 'DM Serif Display', serif; font-size: 20px; }
+  a { color: inherit; text-decoration: none; }
+  .wrap { max-width: 1180px; margin: 0 auto; padding: 0 40px; }
+  @media (max-width: 600px) { .wrap { padding: 0 22px; } }
+  h1, h2 { font-family: 'DM Serif Display', serif; font-weight: 400; letter-spacing: -0.3px; }
+  a:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; border-radius: 4px; }
+
+  nav { position: sticky; top: 0; z-index: 100; background: rgba(250, 246, 239, 0.94); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
+  nav .wrap { display: flex; align-items: center; justify-content: space-between; padding: 18px 40px; }
+  .brand { display: flex; align-items: center; gap: 12px; }
+  .brand svg { width: 38px; height: 38px; }
+  .brand-name { font-family: 'DM Serif Display', serif; font-size: 21px; line-height: 1; }
+  .brand-name small { display: block; font-family: 'DM Sans', sans-serif; font-size: 11.5px; color: var(--gold); font-weight: 600; letter-spacing: 1px; margin-top: 4px; }
   .back-link { font-size: 14px; color: var(--muted); font-weight: 500; }
   .back-link:hover { color: var(--gold); }
-  header { padding: 70px 0 30px 0; }
-  header h1 { font-size: 38px; margin-bottom: 10px; }
-  header p { font-size: 14px; color: var(--muted); }
-  main { padding-bottom: 90px; }
-  section { margin-top: 40px; }
-  section h2 { font-size: 20px; margin-bottom: 12px; }
-  section p, section li { font-size: 14.5px; color: var(--muted); margin-bottom: 10px; }
-  section ul { padding-left: 20px; margin-bottom: 10px; }
-  footer { padding: 44px 0; border-top: 1px solid var(--line); }
-  footer .wrap { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 18px; max-width: 1120px; }
-  .footer-logo { font-family: 'DM Serif Display', serif; font-size: 16px; }
-  .footer-links { display: flex; gap: 26px; font-size: 13px; color: var(--muted); }
+
+  .legal { max-width: 760px; padding: 70px 0 90px; }
+  .kicker { font-size: 14px; color: var(--sky-deep); font-weight: 600; margin-bottom: 14px; }
+  .legal h1 { font-size: 46px; line-height: 1.1; margin-bottom: 12px; }
+  @media (max-width: 720px) { .legal h1 { font-size: 36px; } }
+  .updated { font-size: 14px; color: var(--muted); margin-bottom: 40px; }
+  .intro { font-size: 16.5px; color: var(--muted); margin-bottom: 40px; padding-bottom: 30px; border-bottom: 1px solid var(--line); }
+  .legal section { margin-bottom: 34px; }
+  .legal h2 { font-size: 24px; margin-bottom: 10px; }
+  .legal p { font-size: 15.5px; color: var(--muted); margin-bottom: 12px; }
+  .legal ul { margin: 0 0 12px 20px; color: var(--muted); font-size: 15.5px; }
+  .legal li { margin-bottom: 6px; }
+  .legal a.inline { color: var(--ink); font-weight: 600; border-bottom: 2px solid var(--gold); }
+
+  footer { padding: 40px 0 50px; border-top: 1px solid var(--line); }
+  footer .wrap { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 18px; }
+  .footer-meta { font-size: 13.5px; color: var(--muted); }
+  .footer-links { display: flex; gap: 26px; font-size: 13.5px; color: var(--muted); }
   .footer-links a:hover { color: var(--gold); }
 </style>
 </head>
@@ -42,60 +61,108 @@
 
 <nav>
   <div class="wrap">
-    <div class="nav-logo">Cobb Visual Media</div>
+    <a href="index.html" class="brand" aria-label="Cobb Visual Media home">
+      <svg viewBox="80 70 230 270" aria-hidden="true">
+        <polygon fill="#C9963B" points="99.7,108.6 266.6,76.2 305.7,277.4 138.8,309.8"/>
+        <polygon fill="#C9963B" points="129.7,104.0 316.7,123.6 294.6,333.5 107.6,313.9"/>
+        <polygon fill="#FFFDF8" points="134.9,110.0 309.9,128.4 288.9,327.3 113.9,308.9"/>
+        <polygon fill="#8EC1DE" points="151.5,127.7 296.7,143.0 281.6,286.2 136.4,270.9"/>
+        <polygon fill="#FFFDF8" points="196.0,180.0 248.5,212.0 190.2,235.6"/>
+      </svg>
+      <span class="brand-name">Cobb<small>Visual Media</small></span>
+    </a>
     <a href="index.html" class="back-link">← Back to Home</a>
   </div>
 </nav>
 
-<header class="wrap">
-  <h1>Privacy Policy</h1>
-  <p>Last updated: September 2026</p>
-</header>
-
 <main class="wrap">
-  <section>
-    <h2>What We Collect</h2>
-    <p>When you submit a quote request, we collect the information you provide: name, email address, property details, timeline, and any photos or links you share. We do not collect payment card information directly — that is handled entirely by Stripe.</p>
-  </section>
+  <article class="legal">
+    <p class="kicker">Legal</p>
+    <h1>Privacy Policy</h1>
+    <p class="updated">Effective October 19, 2026</p>
 
-  <section>
-    <h2>How We Use It</h2>
-    <ul>
-      <li>To prepare and send you a project quote</li>
-      <li>To communicate with you about your project</li>
-      <li>To produce your finished video</li>
-      <li>To send a payment link once a quote is approved</li>
-    </ul>
-    <p>We do not sell, rent, or share your information with third parties for marketing purposes.</p>
-  </section>
+    <p class="intro">Cobb Visual Media ("we," "us," or "our") respects your privacy. This policy explains what information we collect through cobbvisualmedia.com, how we use it, and the choices you have.</p>
 
-  <section>
-    <h2>Photos You Submit</h2>
-    <p>Photos submitted for a project are used only to produce your video, unless you separately give permission for portfolio use.</p>
-  </section>
+    <section>
+      <h2>1. Information we collect</h2>
+      <p>We only collect information you choose to send us through our quote request form, including:</p>
+      <ul>
+        <li>Your name, email address, and phone number</li>
+        <li>Your business or property name</li>
+        <li>Project details such as service type, location, timeline, project size, budget range, and notes</li>
+        <li>Links to photos, listings, or other materials you share</li>
+      </ul>
+      <p>When you pay for a project, payment details are collected directly by our payment processor. We never see or store your full card number.</p>
+    </section>
 
-  <section>
-    <h2>Third-Party Services</h2>
-    <p>Quote requests are processed through FormSubmit; payments are processed through Stripe. Each service has its own privacy practices governing the data they handle on our behalf.</p>
-  </section>
+    <section>
+      <h2>2. How we use your information</h2>
+      <p>We use your information to:</p>
+      <ul>
+        <li>Respond to your request and prepare your quote</li>
+        <li>Communicate with you about your project, scheduling, and delivery</li>
+        <li>Send payment links and keep records of completed work</li>
+      </ul>
+      <p>We don't sell, rent, or trade your personal information, and we don't add you to marketing lists without your permission.</p>
+    </section>
 
-  <section>
-    <h2>Data Retention</h2>
-    <p>We retain project information and communications for as long as reasonably necessary to fulfill your order and for basic business record-keeping.</p>
-  </section>
+    <section>
+      <h2>3. Services we rely on</h2>
+      <p>We use a few trusted third-party services to run this website and our business. They handle your information only as needed to provide their service:</p>
+      <ul>
+        <li><strong>FormSubmit</strong> processes quote form submissions and delivers them to our inbox, along with an automatic confirmation email to you.</li>
+        <li><strong>Stripe</strong> processes payments securely.</li>
+        <li><strong>Zoho Mail</strong> hosts our business email.</li>
+        <li><strong>Vercel</strong> hosts this website and may keep standard server logs, such as IP addresses and browser type, for security and performance.</li>
+        <li><strong>Google Fonts</strong> provides the fonts on this site, which means your browser connects to Google's servers when pages load.</li>
+      </ul>
+    </section>
 
-  <section>
-    <h2>Contact</h2>
-    <p>Questions about this policy or requests to delete your information can be sent through our <a href="quote.html">contact form</a>.</p>
-  </section>
+    <section>
+      <h2>4. Cookies and tracking</h2>
+      <p>We don't use advertising cookies, analytics trackers, or tracking pixels on this site. If that changes, we'll update this policy first.</p>
+    </section>
+
+    <section>
+      <h2>5. Your photos and project materials</h2>
+      <p>Photos, footage, and other materials you share are used only to create your project. With your permission, finished work may appear in our portfolio, as described in our <a href="terms.html" class="inline">Terms of Service</a>. If you'd prefer your project not be featured, just let us know.</p>
+    </section>
+
+    <section>
+      <h2>6. How long we keep your information</h2>
+      <p>We keep project and contact information for as long as needed to complete your project, maintain business and tax records, and support any future work you request. You can ask us to delete your information at any time, except where we're required to keep it for legal or accounting reasons.</p>
+    </section>
+
+    <section>
+      <h2>7. Your choices</h2>
+      <p>You can ask us to access, correct, or delete the personal information we have about you. Reach out through our <a href="quote.html" class="inline">contact form</a>, and we'll respond promptly.</p>
+    </section>
+
+    <section>
+      <h2>8. Children's privacy</h2>
+      <p>Our services are intended for adults and businesses. We don't knowingly collect personal information from anyone under 18.</p>
+    </section>
+
+    <section>
+      <h2>9. Changes to this policy</h2>
+      <p>We may update this policy from time to time. The latest version will always be posted on this page with its effective date.</p>
+    </section>
+
+    <section>
+      <h2>10. Contact</h2>
+      <p>Questions about this policy? Reach out through our <a href="quote.html" class="inline">contact form</a> and we'll get back to you.</p>
+    </section>
+  </article>
 </main>
 
 <footer>
   <div class="wrap">
-    <div class="footer-logo">Cobb Visual Media</div>
+    <div class="brand-name">Cobb<small>Visual Media</small></div>
+    <div class="footer-meta">Holt, MI &nbsp;|&nbsp; Serving Lansing &amp; Mid-Michigan</div>
     <div class="footer-links">
       <a href="quote.html">Contact</a>
       <a href="terms.html">Terms</a>
+      <a href="privacy.html">Privacy</a>
     </div>
   </div>
 </footer>
