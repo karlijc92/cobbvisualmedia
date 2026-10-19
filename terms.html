@@ -4,37 +4,56 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Terms of Service | Cobb Visual Media</title>
+<meta name="description" content="Terms of service for Cobb Visual Media video production services.">
+<meta name="robots" content="noindex">
 <style>
   @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@400;500;600;700&display=swap');
+
   * { margin: 0; padding: 0; box-sizing: border-box; }
+
   :root {
-    --paper: #FAF6EF; --panel: #FFFFFF; --ink: #241F1A;
-    --gold: #D9A441; --line: rgba(36, 31, 26, 0.14); --muted: #6B6259;
+    --paper: #FAF6EF;
+    --panel: #FFFFFF;
+    --ink: #241F1A;
+    --gold: #C9963B;
+    --sky-deep: #5B84A6;
+    --line: rgba(36, 31, 26, 0.14);
+    --muted: #6B6259;
   }
+
   body { background: var(--paper); color: var(--ink); font-family: 'DM Sans', sans-serif; line-height: 1.7; }
-  a { color: var(--gold); text-decoration: none; }
-  .wrap { max-width: 760px; margin: 0 auto; padding: 0 40px; }
-  h1, h2 { font-family: 'DM Serif Display', serif; font-weight: 400; }
-  nav {
-    position: sticky; top: 0; z-index: 100; background: rgba(250, 246, 239, 0.92);
-    backdrop-filter: blur(8px); border-bottom: 1px solid var(--line);
-  }
-  nav .wrap { display: flex; align-items: center; justify-content: space-between; padding: 22px 40px; max-width: 1120px; }
-  .nav-logo { font-family: 'DM Serif Display', serif; font-size: 20px; }
+  a { color: inherit; text-decoration: none; }
+  .wrap { max-width: 1180px; margin: 0 auto; padding: 0 40px; }
+  @media (max-width: 600px) { .wrap { padding: 0 22px; } }
+  h1, h2 { font-family: 'DM Serif Display', serif; font-weight: 400; letter-spacing: -0.3px; }
+  a:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; border-radius: 4px; }
+
+  nav { position: sticky; top: 0; z-index: 100; background: rgba(250, 246, 239, 0.94); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
+  nav .wrap { display: flex; align-items: center; justify-content: space-between; padding: 18px 40px; }
+  .brand { display: flex; align-items: center; gap: 12px; }
+  .brand svg { width: 38px; height: 38px; }
+  .brand-name { font-family: 'DM Serif Display', serif; font-size: 21px; line-height: 1; }
+  .brand-name small { display: block; font-family: 'DM Sans', sans-serif; font-size: 11.5px; color: var(--gold); font-weight: 600; letter-spacing: 1px; margin-top: 4px; }
   .back-link { font-size: 14px; color: var(--muted); font-weight: 500; }
   .back-link:hover { color: var(--gold); }
-  header { padding: 70px 0 30px 0; }
-  header h1 { font-size: 38px; margin-bottom: 10px; }
-  header p { font-size: 14px; color: var(--muted); }
-  main { padding-bottom: 90px; }
-  section { margin-top: 40px; }
-  section h2 { font-size: 20px; margin-bottom: 12px; }
-  section p, section li { font-size: 14.5px; color: var(--muted); margin-bottom: 10px; }
-  section ul { padding-left: 20px; margin-bottom: 10px; }
-  footer { padding: 44px 0; border-top: 1px solid var(--line); }
-  footer .wrap { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 18px; max-width: 1120px; }
-  .footer-logo { font-family: 'DM Serif Display', serif; font-size: 16px; }
-  .footer-links { display: flex; gap: 26px; font-size: 13px; color: var(--muted); }
+
+  .legal { max-width: 760px; padding: 70px 0 90px; }
+  .kicker { font-size: 14px; color: var(--sky-deep); font-weight: 600; margin-bottom: 14px; }
+  .legal h1 { font-size: 46px; line-height: 1.1; margin-bottom: 12px; }
+  @media (max-width: 720px) { .legal h1 { font-size: 36px; } }
+  .updated { font-size: 14px; color: var(--muted); margin-bottom: 40px; }
+  .intro { font-size: 16.5px; color: var(--muted); margin-bottom: 40px; padding-bottom: 30px; border-bottom: 1px solid var(--line); }
+  .legal section { margin-bottom: 34px; }
+  .legal h2 { font-size: 24px; margin-bottom: 10px; }
+  .legal p { font-size: 15.5px; color: var(--muted); margin-bottom: 12px; }
+  .legal ul { margin: 0 0 12px 20px; color: var(--muted); font-size: 15.5px; }
+  .legal li { margin-bottom: 6px; }
+  .legal a.inline { color: var(--ink); font-weight: 600; border-bottom: 2px solid var(--gold); }
+
+  footer { padding: 40px 0 50px; border-top: 1px solid var(--line); }
+  footer .wrap { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 18px; }
+  .footer-meta { font-size: 13.5px; color: var(--muted); }
+  .footer-links { display: flex; gap: 26px; font-size: 13.5px; color: var(--muted); }
   .footer-links a:hover { color: var(--gold); }
 </style>
 </head>
@@ -42,63 +61,90 @@
 
 <nav>
   <div class="wrap">
-    <div class="nav-logo">Cobb Visual Media</div>
+    <a href="index.html" class="brand" aria-label="Cobb Visual Media home">
+      <svg viewBox="80 70 230 270" aria-hidden="true">
+        <polygon fill="#C9963B" points="99.7,108.6 266.6,76.2 305.7,277.4 138.8,309.8"/>
+        <polygon fill="#C9963B" points="129.7,104.0 316.7,123.6 294.6,333.5 107.6,313.9"/>
+        <polygon fill="#FFFDF8" points="134.9,110.0 309.9,128.4 288.9,327.3 113.9,308.9"/>
+        <polygon fill="#8EC1DE" points="151.5,127.7 296.7,143.0 281.6,286.2 136.4,270.9"/>
+        <polygon fill="#FFFDF8" points="196.0,180.0 248.5,212.0 190.2,235.6"/>
+      </svg>
+      <span class="brand-name">Cobb<small>Visual Media</small></span>
+    </a>
     <a href="index.html" class="back-link">← Back to Home</a>
   </div>
 </nav>
 
-<header class="wrap">
-  <h1>Terms of Service</h1>
-  <p>Last updated: September 2026</p>
-</header>
-
 <main class="wrap">
-  <section>
-    <h2>Services</h2>
-    <p>Cobb Visual Media creates cinematic walkthrough videos for properties and businesses, built from photos provided by the client or captured by us upon request.</p>
-  </section>
+  <article class="legal">
+    <p class="kicker">Legal</p>
+    <h1>Terms of Service</h1>
+    <p class="updated">Effective October 19, 2026</p>
 
-  <section>
-    <h2>Quotes &amp; Pricing</h2>
-    <p>Pricing is determined per project based on property size, photo/shoot requirements, revisions needed, and turnaround time. No work begins until a quote is approved in writing (email) by the client.</p>
-  </section>
+    <p class="intro">These terms apply to all video, photography, and editing services provided by Cobb Visual Media ("we," "us," or "our") to you, the client. By submitting a quote request, approving a quote, or paying for services, you agree to these terms.</p>
 
-  <section>
-    <h2>Payment</h2>
-    <p>Full payment is due upfront via the secure payment link provided after quote approval. Work begins once payment is confirmed. We do not store or process card details directly — all payments are handled through Stripe.</p>
-  </section>
+    <section>
+      <h2>1. Quotes and scope</h2>
+      <p>Prices listed on our website are starting prices. After you submit a quote request, we'll send a written quote describing the services, deliverables, timeline, and price for your project. Your quote, together with these terms, makes up our agreement. Work outside the approved quote, such as additional locations, extra videos, or major changes in direction, may be quoted separately.</p>
+    </section>
 
-  <section>
-    <h2>Revisions</h2>
-    <p>Each project includes one round of revisions to the delivered video. Additional revision rounds may incur an added fee, communicated before any extra work begins.</p>
-  </section>
+    <section>
+      <h2>2. Payment</h2>
+      <p>Once you approve your quote, we'll send a secure payment link for the quoted amount. Payment is due before work begins unless your quote states otherwise. Payments are processed by a third-party payment provider, and we never see or store your full card details.</p>
+    </section>
 
-  <section>
-    <h2>Turnaround</h2>
-    <p>Standard turnaround time will be communicated at the time of quote approval and depends on current workload. Rush delivery may be available for an additional fee.</p>
-  </section>
+    <section>
+      <h2>3. Scheduling, rescheduling, and cancellations</h2>
+      <p>For on-site projects, we'll confirm a shoot date with you. If weather, safety concerns, or circumstances outside our control prevent filming, we'll work with you to reschedule at no extra cost. If you need to reschedule or cancel, please let us know as early as possible. Cancellation and refund terms for your project are stated in your quote.</p>
+    </section>
 
-  <section>
-    <h2>Cancellations &amp; Refunds</h2>
-    <p>Because production begins immediately upon payment, completed or in-progress work is non-refundable. If a project has not yet entered production, cancellation requests will be reviewed on a case-by-case basis.</p>
-  </section>
+    <section>
+      <h2>4. Photos and materials you provide</h2>
+      <p>If you send us photos, footage, logos, or other materials, you confirm that you own them or have permission to use them, and that we may use them to create your video. You're responsible for any claims arising from materials you provide.</p>
+      <p>For on-site shoots, you confirm that you have permission for us to film at the location and are responsible for securing any property, venue, or event permissions needed.</p>
+    </section>
 
-  <section>
-    <h2>Photo &amp; Content Usage</h2>
-    <p>By submitting photos, you confirm you have the right to use them and grant Cobb Visual Media permission to use those photos solely for the purpose of producing your video. Cobb Visual Media may request permission to display the finished video in its own portfolio; this is never assumed without your consent.</p>
-  </section>
+    <section>
+      <h2>5. Revisions and delivery</h2>
+      <p>The number of revision rounds and the delivery timeline are stated in your quote. Revisions cover adjustments to the approved concept, such as pacing, music, text, and clip order. A full re-edit or a new creative direction may be quoted as additional work. Final files are delivered digitally in the formats listed in your quote.</p>
+    </section>
 
-  <section>
-    <h2>Contact</h2>
-    <p>Questions about these terms can be sent through our <a href="quote.html">contact form</a>.</p>
-  </section>
+    <section>
+      <h2>6. Usage rights</h2>
+      <p>Once your project is paid in full, you may use the final video for marketing your property, business, venue, or event, including on your website, listing platforms, social media, presentations, and ads.</p>
+      <p>Cobb Visual Media keeps ownership of the original raw footage, project files, and creative work, and may feature the final video and stills in our portfolio and marketing. If you'd prefer your project not be featured, just tell us before delivery.</p>
+      <p>Music in your video is licensed for the uses described above. Using the video in broadcast television or paid content distribution may require additional licensing.</p>
+    </section>
+
+    <section>
+      <h2>7. Our responsibility</h2>
+      <p>We take care to deliver high-quality work, but we can't guarantee specific results like bookings, sales, or views. To the fullest extent allowed by law, our total liability for any claim related to our services is limited to the amount you paid for the project in question. We're not liable for indirect or consequential losses, such as lost profits or lost business.</p>
+    </section>
+
+    <section>
+      <h2>8. Changes to these terms</h2>
+      <p>We may update these terms from time to time. The version posted on this page at the time you approve your quote applies to your project.</p>
+    </section>
+
+    <section>
+      <h2>9. Governing law</h2>
+      <p>These terms are governed by the laws of the State of Michigan.</p>
+    </section>
+
+    <section>
+      <h2>10. Contact</h2>
+      <p>Questions about these terms? Reach out through our <a href="quote.html" class="inline">contact form</a> and we'll get back to you.</p>
+    </section>
+  </article>
 </main>
 
 <footer>
   <div class="wrap">
-    <div class="footer-logo">Cobb Visual Media</div>
+    <div class="brand-name">Cobb<small>Visual Media</small></div>
+    <div class="footer-meta">Holt, MI &nbsp;|&nbsp; Serving Lansing &amp; Mid-Michigan</div>
     <div class="footer-links">
       <a href="quote.html">Contact</a>
+      <a href="terms.html">Terms</a>
       <a href="privacy.html">Privacy</a>
     </div>
   </div>
