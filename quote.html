@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Request a Quote | Cobb Visual Media</title>
-<meta name="description" content="Request a quote for a cinematic property walkthrough video from Cobb Visual Media.">
+<title>Request a Quote | Cobb Visual Media | Holt & Lansing, MI</title>
+<meta name="description" content="Request a quote from Cobb Visual Media for property walkthroughs, commercial and business video, venues, golf courses, and sports and event highlights. Packages starting at $600.">
 <style>
   @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@400;500;600;700&display=swap');
 
@@ -15,57 +15,107 @@
     --paper: #FAF6EF;
     --panel: #FFFFFF;
     --ink: #241F1A;
-    --gold: #D9A441;
-    --sky: #5B84A6;
+    --gold: #C9963B;
+    --gold-soft: #F1DDB2;
+    --sky: #8EC1DE;
+    --sky-deep: #5B84A6;
     --line: rgba(36, 31, 26, 0.14);
     --muted: #6B6259;
   }
 
   body { background: var(--paper); color: var(--ink); font-family: 'DM Sans', sans-serif; line-height: 1.65; }
   a { color: inherit; text-decoration: none; }
-  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 40px; }
+  .wrap { max-width: 1180px; margin: 0 auto; padding: 0 40px; }
+  @media (max-width: 600px) { .wrap { padding: 0 22px; } }
   h1, h2, h3 { font-family: 'DM Serif Display', serif; font-weight: 400; letter-spacing: -0.3px; }
+  a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
 
-  nav {
-    position: sticky; top: 0; z-index: 100;
-    background: rgba(250, 246, 239, 0.92);
-    backdrop-filter: blur(8px);
-    border-bottom: 1px solid var(--line);
-  }
-  nav .wrap { display: flex; align-items: center; justify-content: space-between; padding: 22px 40px; }
-  .nav-logo { font-family: 'DM Serif Display', serif; font-size: 20px; }
+  /* NAV */
+  nav { position: sticky; top: 0; z-index: 100; background: rgba(250, 246, 239, 0.94); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
+  nav .wrap { display: flex; align-items: center; justify-content: space-between; padding: 18px 40px; }
+  .brand { display: flex; align-items: center; gap: 12px; }
+  .brand svg { width: 38px; height: 38px; }
+  .brand-name { font-family: 'DM Serif Display', serif; font-size: 21px; line-height: 1; }
+  .brand-name small { display: block; font-family: 'DM Sans', sans-serif; font-size: 11.5px; color: var(--gold); font-weight: 600; letter-spacing: 1px; margin-top: 4px; }
   .back-link { font-size: 14px; color: var(--muted); font-weight: 500; }
   .back-link:hover { color: var(--gold); }
 
-  header.page-head { padding: 80px 0 50px 0; max-width: 640px; }
-  header.page-head h1 { font-size: 42px; margin-bottom: 16px; }
-  header.page-head p { font-size: 16px; color: var(--muted); }
+  /* HEAD */
+  .page-head { padding: 70px 0 44px; max-width: 680px; }
+  .kicker { font-size: 14px; color: var(--sky-deep); font-weight: 600; margin-bottom: 14px; }
+  .page-head h1 { font-size: 48px; line-height: 1.1; margin-bottom: 16px; }
+  @media (max-width: 720px) { .page-head h1 { font-size: 36px; } }
+  .page-head p { font-size: 16.5px; color: var(--muted); }
 
-  .section { padding: 0 0 90px 0; }
+  /* LAYOUT */
+  .layout { display: grid; grid-template-columns: 1.6fr 1fr; gap: 40px; align-items: start; padding-bottom: 90px; }
+  @media (max-width: 960px) { .layout { grid-template-columns: 1fr; } }
 
-  .quote-form { background: var(--panel); border: 1px solid var(--line); border-radius: 16px; padding: 40px; max-width: 680px; }
-  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px; }
+  /* FORM */
+  .quote-form { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 40px; }
+  @media (max-width: 600px) { .quote-form { padding: 26px 20px; } }
+  .form-section { margin-bottom: 30px; }
+  .form-section h2 { font-size: 22px; margin-bottom: 18px; padding-bottom: 10px; border-bottom: 1px solid var(--line); }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0 20px; }
   @media (max-width: 600px) { .form-row { grid-template-columns: 1fr; } }
-  .form-field { display: flex; flex-direction: column; gap: 6px; margin-bottom: 20px; }
-  .form-field label { font-size: 13px; font-weight: 600; color: var(--ink); }
-  .form-field .hint { font-size: 12px; color: var(--muted); font-weight: 400; }
+  .form-field { display: flex; flex-direction: column; gap: 6px; margin-bottom: 18px; }
+  .form-field label, .group-label { font-size: 13.5px; font-weight: 600; }
+  .optional { font-weight: 400; color: var(--muted); }
+  .hint { font-size: 12.5px; color: var(--muted); }
   .form-field input, .form-field select, .form-field textarea {
-    font-family: 'DM Sans', sans-serif; font-size: 14px; padding: 12px 14px;
-    border: 1px solid var(--line); border-radius: 8px; background: var(--paper); color: var(--ink);
+    font-family: 'DM Sans', sans-serif; font-size: 15px; padding: 12px 14px;
+    border: 1px solid var(--line); border-radius: 6px; background: var(--paper); color: var(--ink); width: 100%;
   }
   .form-field input:focus, .form-field select:focus, .form-field textarea:focus { outline: none; border-color: var(--gold); }
-  .form-field textarea { resize: vertical; min-height: 90px; }
-  .checkbox-row { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 24px; }
-  .checkbox-row input { margin-top: 3px; }
-  .checkbox-row label { font-size: 13.5px; color: var(--muted); }
-  .form-submit { background: var(--ink); color: var(--paper); border: none; padding: 15px 32px; border-radius: 30px; font-weight: 600; font-size: 15px; cursor: pointer; font-family: 'DM Sans', sans-serif; }
-  .form-submit:hover { opacity: 0.85; }
-  .form-note { font-size: 12.5px; color: var(--muted); margin-top: 14px; }
+  .form-field textarea { resize: vertical; min-height: 110px; }
 
-  footer { padding: 44px 0; border-top: 1px solid var(--line); }
+  .choice-group { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 8px 0 18px; }
+  @media (max-width: 600px) { .choice-group { grid-template-columns: 1fr; } }
+  .choice { position: relative; }
+  .choice input { position: absolute; opacity: 0; inset: 0; cursor: pointer; }
+  .choice span { display: block; border: 1px solid var(--line); border-radius: 6px; padding: 12px 14px; font-size: 14px; background: var(--paper); height: 100%; }
+  .choice span strong { display: block; font-size: 14.5px; }
+  .choice span em { font-style: normal; font-size: 12.5px; color: var(--muted); }
+  .choice input:checked + span { border-color: var(--gold); background: rgba(241, 221, 178, 0.35); box-shadow: inset 0 0 0 1px var(--gold); }
+  .choice input:focus-visible + span { outline: 2px solid var(--gold); outline-offset: 2px; }
+
+  .checkbox-row { display: flex; align-items: flex-start; gap: 12px; padding: 16px 18px; border: 1px dashed var(--gold); border-radius: 6px; background: rgba(241, 221, 178, 0.2); margin-bottom: 18px; }
+  .checkbox-row input { margin-top: 4px; width: 17px; height: 17px; accent-color: var(--gold); }
+  .checkbox-row label { font-size: 14.5px; }
+  .checkbox-row label span { display: block; font-size: 13px; color: var(--muted); }
+
+  .form-submit { background: var(--ink); color: var(--paper); border: none; padding: 16px 34px; border-radius: 30px; font-weight: 600; font-size: 15.5px; cursor: pointer; font-family: 'DM Sans', sans-serif; }
+  .form-submit:hover { opacity: 0.88; }
+  .form-note { font-size: 13px; color: var(--muted); margin-top: 14px; }
+
+  .success { display: none; background: var(--panel); border: 1px solid var(--gold); border-radius: 8px; padding: 40px; }
+  .success h2 { font-size: 30px; margin-bottom: 10px; }
+  .success p { color: var(--muted); margin-bottom: 20px; }
+  .success a { font-weight: 600; border-bottom: 2px solid var(--gold); }
+  body.sent .quote-form { display: none; }
+  body.sent .success { display: block; }
+
+  /* SIDEBAR */
+  .sidebar { position: sticky; top: 100px; display: flex; flex-direction: column; gap: 22px; }
+  @media (max-width: 960px) { .sidebar { position: static; } }
+  .side-card { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 28px; }
+  .side-card h3 { font-size: 21px; margin-bottom: 14px; }
+  .price-list { list-style: none; }
+  .price-list li { display: flex; justify-content: space-between; gap: 14px; padding: 10px 0; border-top: 1px solid var(--line); font-size: 14.5px; }
+  .price-list li strong { font-family: 'DM Serif Display', serif; font-weight: 400; font-size: 17px; white-space: nowrap; }
+  .price-list li.active { color: var(--ink); font-weight: 600; }
+  .price-list li.active::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--gold); align-self: center; margin-right: -6px; }
+  .side-note { font-size: 13px; color: var(--muted); margin-top: 12px; }
+  .next-steps { list-style: none; counter-reset: s; }
+  .next-steps li { counter-increment: s; position: relative; padding: 0 0 14px 34px; font-size: 14.5px; color: var(--muted); }
+  .next-steps li::before { content: counter(s); position: absolute; left: 0; top: 0; font-family: 'DM Serif Display', serif; font-style: italic; color: var(--gold); font-size: 20px; line-height: 1.2; }
+  .next-steps li strong { color: var(--ink); display: block; font-weight: 600; }
+
+  /* FOOTER */
+  footer { padding: 40px 0 50px; border-top: 1px solid var(--line); }
   footer .wrap { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 18px; }
-  .footer-logo { font-family: 'DM Serif Display', serif; font-size: 16px; }
-  .footer-links { display: flex; gap: 26px; font-size: 13px; color: var(--muted); }
+  .footer-meta { font-size: 13.5px; color: var(--muted); }
+  .footer-links { display: flex; gap: 26px; font-size: 13.5px; color: var(--muted); }
   .footer-links a:hover { color: var(--gold); }
 </style>
 </head>
@@ -73,82 +123,176 @@
 
 <nav>
   <div class="wrap">
-    <div class="nav-logo">Cobb Visual Media</div>
+    <a href="index.html" class="brand" aria-label="Cobb Visual Media home">
+      <svg viewBox="80 70 230 270" aria-hidden="true">
+        <polygon fill="#C9963B" points="99.7,108.6 266.6,76.2 305.7,277.4 138.8,309.8"/>
+        <polygon fill="#C9963B" points="129.7,104.0 316.7,123.6 294.6,333.5 107.6,313.9"/>
+        <polygon fill="#FFFDF8" points="134.9,110.0 309.9,128.4 288.9,327.3 113.9,308.9"/>
+        <polygon fill="#8EC1DE" points="151.5,127.7 296.7,143.0 281.6,286.2 136.4,270.9"/>
+        <polygon fill="#FFFDF8" points="196.0,180.0 248.5,212.0 190.2,235.6"/>
+      </svg>
+      <span class="brand-name">Cobb<small>Visual Media</small></span>
+    </a>
     <a href="index.html" class="back-link">← Back to Home</a>
   </div>
 </nav>
 
 <header class="page-head wrap">
-  <h1>Request a quote.</h1>
-  <p>Tell us about the property and what you need. We work primarily with commercial real estate and boutique/luxury hospitality — but reach out for any property type and we'll get back to you with next steps.</p>
+  <p class="kicker">Holt, Lansing &amp; Mid-Michigan</p>
+  <h1>Let's plan your video.</h1>
+  <p>Tell us what you're showing off and we'll send a firm quote and next steps. It takes about two minutes.</p>
 </header>
 
-<section class="section" id="quote-form">
-  <div class="wrap">
-    <form class="quote-form" action="https://formsubmit.co/karlicobb@cobbvisualmedia.com" method="POST">
-      <input type="hidden" name="_subject" value="New Inquiry - Cobb Visual Media">
+<main class="wrap layout">
+  <div>
+    <form class="quote-form" id="quote-form" action="https://formsubmit.co/karlicobb@cobbvisualmedia.com" method="POST">
+      <input type="hidden" name="_subject" value="New Quote Request - Cobb Visual Media">
       <input type="hidden" name="_captcha" value="false">
       <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_next" value="https://www.cobbvisualmedia.com/quote.html?sent=1">
+      <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
 
-      <div class="form-row">
+      <div class="form-section">
+        <h2>Your project</h2>
         <div class="form-field">
-          <label for="name">Name</label>
-          <input type="text" id="name" name="Name" required>
-        </div>
-        <div class="form-field">
-          <label for="email">Email</label>
-          <input type="email" id="email" name="Email" required>
-        </div>
-      </div>
-
-      <div class="form-row">
-        <div class="form-field">
-          <label for="type">Property type</label>
-          <select id="type" name="Property Type">
-            <option value="Commercial Real Estate">Commercial Real Estate</option>
-            <option value="Boutique / Luxury Hospitality">Boutique / Luxury Hospitality</option>
-            <option value="Short-Term Rental">Short-Term Rental</option>
-            <option value="Other / Not Sure">Other / Not Sure</option>
+          <label for="service">What do you need?</label>
+          <select id="service" name="Service" required>
+            <option value="" disabled selected>Choose a service</option>
+            <option value="property">Property Walkthrough (from $600)</option>
+            <option value="commercial">Commercial &amp; Business (from $800)</option>
+            <option value="venue">Venues &amp; Hospitality (from $900)</option>
+            <option value="golf">Golf Courses &amp; Recreation (from $1,200)</option>
+            <option value="sports">Sports &amp; Event Highlights (from $600)</option>
+            <option value="other">Something Else / Not Sure</option>
           </select>
         </div>
+
+        <span class="group-label">How should we capture it?</span>
+        <div class="choice-group" role="radiogroup">
+          <label class="choice">
+            <input type="radio" name="Capture Method" value="Film on-site" required>
+            <span><strong>Film on-site</strong><em>We come to you</em></span>
+          </label>
+          <label class="choice">
+            <input type="radio" name="Capture Method" value="Use my existing photos">
+            <span><strong>Use my photos</strong><em>Built from your images</em></span>
+          </label>
+          <label class="choice">
+            <input type="radio" name="Capture Method" value="Not sure yet">
+            <span><strong>Not sure yet</strong><em>Help me decide</em></span>
+          </label>
+        </div>
+
+        <div class="form-row">
+          <div class="form-field">
+            <label for="location">Location</label>
+            <input type="text" id="location" name="Location" placeholder="City or address" required>
+          </div>
+          <div class="form-field">
+            <label for="timeline">Date or deadline</label>
+            <input type="text" id="timeline" name="Timeline" placeholder="e.g. event on June 14, or within 2 weeks">
+          </div>
+        </div>
+
         <div class="form-field">
-          <label for="rooms">Property size</label>
-          <span class="hint">Rooms / spaces to feature</span>
-          <input type="text" id="rooms" name="Property Size" placeholder="e.g. 3 bedrooms, living area, patio">
+          <label for="scope">Project size</label>
+          <span class="hint" id="scope-hint">Rooms, square footage, holes, event length, whatever helps us picture it.</span>
+          <input type="text" id="scope" name="Project Size" placeholder="Tell us the size or scope">
+        </div>
+
+        <div class="form-row">
+          <div class="form-field">
+            <label for="budget">Budget range <span class="optional">(optional)</span></label>
+            <select id="budget" name="Budget">
+              <option value="Not specified">Prefer not to say</option>
+              <option value="$600 - $1,000">$600 – $1,000</option>
+              <option value="$1,000 - $2,000">$1,000 – $2,000</option>
+              <option value="$2,000 - $5,000">$2,000 – $5,000</option>
+              <option value="$5,000+">$5,000+</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <label for="photos">Link to photos or listing <span class="optional">(optional)</span></label>
+            <input type="text" id="photos" name="Photo Link" placeholder="Google Drive, Dropbox, website">
+          </div>
+        </div>
+
+        <div class="checkbox-row">
+          <input type="checkbox" id="reels" name="Add Social Media Reels" value="Yes">
+          <label for="reels">Add social media reels (from $150)
+            <span>Vertical cuts sized for Instagram, TikTok, Facebook, and YouTube Shorts.</span>
+          </label>
+        </div>
+
+        <div class="form-field">
+          <label for="notes">Anything else? <span class="optional">(optional)</span></label>
+          <textarea id="notes" name="Notes" placeholder="The vibe you're going for, must-have shots, where the video will be used..."></textarea>
         </div>
       </div>
 
-      <div class="form-row">
-        <div class="form-field">
-          <label for="timeline">Needed by</label>
-          <input type="text" id="timeline" name="Timeline" placeholder="e.g. within 2 weeks">
+      <div class="form-section">
+        <h2>Your contact info</h2>
+        <div class="form-row">
+          <div class="form-field">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="Name" autocomplete="name" required>
+          </div>
+          <div class="form-field">
+            <label for="business">Business or property name <span class="optional">(optional)</span></label>
+            <input type="text" id="business" name="Business" autocomplete="organization">
+          </div>
         </div>
-        <div class="form-field">
-          <label for="photos">Link to existing photos</label>
-          <span class="hint">Google Drive, Dropbox, listing URL, etc.</span>
-          <input type="text" id="photos" name="Photo Link">
+        <div class="form-row">
+          <div class="form-field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="Email" autocomplete="email" required>
+          </div>
+          <div class="form-field">
+            <label for="phone">Phone <span class="optional">(optional)</span></label>
+            <input type="tel" id="phone" name="Phone" autocomplete="tel">
+          </div>
         </div>
       </div>
 
-      <div class="checkbox-row">
-        <input type="checkbox" id="need-photos" name="Needs Photos Sourced" value="Yes">
-        <label for="need-photos">I don't have photos yet and need help sourcing/styling them</label>
-      </div>
-
-      <div class="form-field">
-        <label for="notes">Anything else we should know?</label>
-        <textarea id="notes" name="Notes" placeholder="Property details, style, special requests..."></textarea>
-      </div>
-
-      <button type="submit" class="form-submit">Submit Request</button>
-      <p class="form-note">We'll follow up by email with a quote and next steps — no charge until you approve it.</p>
+      <button type="submit" class="form-submit">Send My Quote Request</button>
+      <p class="form-note">No charge until you approve your quote.</p>
     </form>
+
+    <div class="success" role="status">
+      <h2>Request received.</h2>
+      <p>Thanks for reaching out. We'll review your project and follow up by email with a quote and next steps.</p>
+      <a href="index.html#work">Browse our work while you wait</a>
+    </div>
   </div>
-</section>
+
+  <aside class="sidebar">
+    <div class="side-card">
+      <h3>Starting prices</h3>
+      <ul class="price-list" id="price-list">
+        <li data-service="property">Property Walkthroughs <strong>$600</strong></li>
+        <li data-service="commercial">Commercial &amp; Business <strong>$800</strong></li>
+        <li data-service="venue">Venues &amp; Hospitality <strong>$900</strong></li>
+        <li data-service="golf">Golf Courses &amp; Recreation <strong>$1,200</strong></li>
+        <li data-service="sports">Sports &amp; Event Highlights <strong>$600</strong></li>
+        <li>Social Media Reels add-on <strong>$150</strong></li>
+      </ul>
+      <p class="side-note">Final pricing depends on size, length, and deliverables.</p>
+    </div>
+    <div class="side-card">
+      <h3>What happens next</h3>
+      <ol class="next-steps">
+        <li><strong>We review your request</strong>and follow up with any quick questions.</li>
+        <li><strong>You get a firm quote</strong>with exactly what's included.</li>
+        <li><strong>Approve and book</strong>with a secure payment link, then we get to work.</li>
+      </ol>
+    </div>
+  </aside>
+</main>
 
 <footer>
   <div class="wrap">
-    <div class="footer-logo">Cobb Visual Media</div>
+    <div class="brand-name">Cobb<small>Visual Media</small></div>
+    <div class="footer-meta">Holt, MI &nbsp;|&nbsp; Serving Lansing &amp; Mid-Michigan</div>
     <div class="footer-links">
       <a href="quote.html">Contact</a>
       <a href="terms.html">Terms</a>
@@ -156,6 +300,36 @@
     </div>
   </div>
 </footer>
+
+<script>
+  (function () {
+    var params = new URLSearchParams(window.location.search);
+    if (params.get('sent') === '1') { document.body.classList.add('sent'); window.scrollTo(0, 0); }
+
+    var select = document.getElementById('service');
+    var scope = document.getElementById('scope');
+    var items = document.querySelectorAll('#price-list li[data-service]');
+    var placeholders = {
+      property: 'e.g. 3 bed / 2 bath, about 1,800 sq ft, backyard and patio',
+      commercial: 'e.g. 4,000 sq ft retail space, or a 60-second brand promo',
+      venue: 'e.g. ballroom, garden ceremony site, and 12 guest rooms',
+      golf: 'e.g. 18 holes plus clubhouse and banquet room',
+      sports: 'e.g. 2-hour tournament, highlight reel of top plays',
+      other: 'Tell us the size or scope'
+    };
+
+    function update() {
+      var v = select.value;
+      scope.placeholder = placeholders[v] || 'Tell us the size or scope';
+      items.forEach(function (li) { li.classList.toggle('active', li.getAttribute('data-service') === v); });
+    }
+
+    var preset = params.get('service');
+    if (preset && placeholders[preset]) { select.value = preset; }
+    select.addEventListener('change', update);
+    update();
+  })();
+</script>
 
 </body>
 </html>
