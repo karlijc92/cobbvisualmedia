@@ -3,8 +3,20 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cobb Visual Media | Property Videos That Feel Like Real Life</title>
-<meta name="description" content="Warm, cinematic walkthrough videos for short-term rentals, commercial real estate, and boutique hospitality.">
+<title>Cobb Visual Media | Cinematic Video for Properties, Businesses, Venues & Events | Holt & Lansing, MI</title>
+<meta name="description" content="Cinematic video production in Holt, Lansing, and Mid-Michigan. Property walkthroughs, commercial and business video, venues, golf courses, and sports and event highlights. Packages starting at $600.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Cobb Visual Media",
+  "url": "https://www.cobbvisualmedia.com",
+  "description": "Cinematic video for properties, businesses, venues, golf courses, and events.",
+  "address": { "@type": "PostalAddress", "addressLocality": "Holt", "addressRegion": "MI", "addressCountry": "US" },
+  "areaServed": ["Holt, MI", "Lansing, MI", "East Lansing, MI", "Mid-Michigan"],
+  "priceRange": "$600+"
+}
+</script>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@400;500;600;700&display=swap');
 
@@ -15,73 +27,145 @@
     --paper: #FAF6EF;
     --panel: #FFFFFF;
     --ink: #241F1A;
-    --gold: #D9A441;
-    --sky: #5B84A6;
-    --sage: #7C8F6D;
+    --gold: #C9963B;
+    --gold-soft: #F1DDB2;
+    --sky: #8EC1DE;
+    --sky-deep: #5B84A6;
     --line: rgba(36, 31, 26, 0.14);
     --muted: #6B6259;
   }
 
-  body {
-    background: var(--paper);
-    color: var(--ink);
-    font-family: 'DM Sans', sans-serif;
-    line-height: 1.65;
-  }
-
+  body { background: var(--paper); color: var(--ink); font-family: 'DM Sans', sans-serif; line-height: 1.65; }
   a { color: inherit; text-decoration: none; }
-  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 40px; }
-
+  img { max-width: 100%; display: block; }
+  .wrap { max-width: 1180px; margin: 0 auto; padding: 0 40px; }
+  @media (max-width: 600px) { .wrap { padding: 0 22px; } }
   h1, h2, h3 { font-family: 'DM Serif Display', serif; font-weight: 400; letter-spacing: -0.3px; }
+  a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; border-radius: 6px; }
 
-  nav {
-    position: sticky; top: 0; z-index: 100;
-    background: rgba(250, 246, 239, 0.92);
-    backdrop-filter: blur(8px);
-    border-bottom: 1px solid var(--line);
-  }
-  nav .wrap { display: flex; align-items: center; justify-content: space-between; padding: 22px 40px; }
-  .nav-logo { font-family: 'DM Serif Display', serif; font-size: 20px; }
-  .nav-links { display: flex; gap: 34px; font-size: 14px; color: var(--muted); }
+  /* Image placeholders: show a warm gradient until real photos are added */
+  .ph { position: relative; overflow: hidden; background: linear-gradient(135deg, var(--gold-soft), var(--sky) 120%); }
+  .ph img, .ph video { width: 100%; height: 100%; object-fit: cover; }
+
+  /* NAV */
+  nav { position: sticky; top: 0; z-index: 100; background: rgba(250, 246, 239, 0.94); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
+  nav .wrap { display: flex; align-items: center; justify-content: space-between; padding: 18px 40px; }
+  .brand { display: flex; align-items: center; gap: 12px; }
+  .brand svg { width: 38px; height: 38px; }
+  .brand-name { font-family: 'DM Serif Display', serif; font-size: 21px; line-height: 1; }
+  .brand-name small { display: block; font-family: 'DM Sans', sans-serif; font-size: 11.5px; color: var(--gold); font-weight: 600; letter-spacing: 1px; margin-top: 4px; }
+  .nav-links { display: flex; gap: 30px; font-size: 14.5px; color: var(--muted); }
   .nav-links a:hover { color: var(--gold); }
-  .nav-cta { background: var(--ink); color: var(--paper) !important; padding: 10px 22px; border-radius: 30px; font-size: 14px; font-weight: 600; }
-  @media (max-width: 780px) { .nav-links { display: none; } }
+  .nav-cta { background: var(--ink); color: var(--paper); padding: 11px 22px; border-radius: 30px; font-size: 14px; font-weight: 600; }
+  @media (max-width: 900px) { .nav-links { display: none; } }
 
-  header.hero { padding: 80px 0 60px 0; }
-  .hero-grid { display: block; max-width: 640px; }
-
-  .hero h1 { font-size: 46px; line-height: 1.2; margin-bottom: 22px; }
-  .hero p.lead { font-size: 17px; color: var(--muted); max-width: 540px; margin-bottom: 32px; }
-  @media (max-width: 720px) { .hero h1 { font-size: 34px; } }
-
-  .hero-cta-row { display: flex; gap: 14px; align-items: center; flex-wrap: wrap; }
+  /* HERO */
+  .hero { padding: 72px 0 80px; }
+  .hero .wrap { display: grid; grid-template-columns: 1.05fr 1fr; gap: 60px; align-items: center; }
+  @media (max-width: 960px) { .hero .wrap { grid-template-columns: 1fr; } }
+  .hero-kicker { font-size: 14px; color: var(--sky-deep); font-weight: 600; margin-bottom: 18px; }
+  .hero h1 { font-size: 54px; line-height: 1.1; margin-bottom: 22px; }
+  @media (max-width: 720px) { .hero h1 { font-size: 38px; } }
+  .hero .lead { font-size: 17.5px; color: var(--muted); max-width: 540px; margin-bottom: 30px; }
+  .cta-row { display: flex; gap: 14px; flex-wrap: wrap; align-items: center; }
   .btn-primary { background: var(--ink); color: var(--paper); padding: 15px 28px; border-radius: 30px; font-weight: 600; font-size: 15px; }
-  .btn-ghost { border: 1px solid var(--line); color: var(--ink); padding: 15px 28px; border-radius: 30px; font-weight: 600; font-size: 15px; }
+  .btn-primary:hover { opacity: 0.88; }
+  .btn-ghost { border: 1px solid var(--line); padding: 15px 28px; border-radius: 30px; font-weight: 600; font-size: 15px; }
+  .btn-ghost:hover { border-color: var(--gold); }
+  .hero-price { margin-top: 26px; font-size: 15px; color: var(--muted); }
+  .hero-price strong { font-family: 'DM Serif Display', serif; font-weight: 400; font-size: 24px; color: var(--ink); }
 
-  .trust-strip { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 24px 0; }
-  .trust-strip .wrap { display: flex; flex-wrap: wrap; gap: 12px 34px; justify-content: center; font-size: 13.5px; color: var(--muted); }
+  .collage { position: relative; height: 480px; }
+  @media (max-width: 960px) { .collage { height: 400px; } }
+  .snap { position: absolute; background: #FFFDF8; padding: 12px 12px 46px; box-shadow: 0 18px 40px rgba(36,31,26,0.16); }
+  .snap .ph { width: 100%; height: 100%; }
+  .snap span { position: absolute; bottom: 14px; left: 16px; font-family: 'DM Serif Display', serif; font-style: italic; font-size: 15px; color: var(--muted); }
+  .snap-1 { width: 58%; height: 62%; top: 0; left: 4%; transform: rotate(-5deg); }
+  .snap-2 { width: 52%; height: 56%; top: 14%; right: 0; transform: rotate(4deg); }
+  .snap-3 { width: 50%; height: 50%; bottom: 0; left: 22%; transform: rotate(-1.5deg); z-index: 2; }
 
-  .section { padding: 90px 0; }
-  .section-head { max-width: 580px; margin-bottom: 50px; }
-  .section h2 { font-size: 32px; margin-bottom: 12px; }
-  .section-lead { font-size: 15.5px; color: var(--muted); }
+  /* TRUST STRIP */
+  .strip { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 22px 0; background: var(--panel); }
+  .strip .wrap { display: flex; flex-wrap: wrap; gap: 10px 34px; justify-content: center; font-size: 14px; color: var(--muted); }
 
+  /* SECTIONS */
+  .section { padding: 96px 0; }
+  .section-head { max-width: 640px; margin-bottom: 50px; }
+  .section h2 { font-size: 38px; line-height: 1.15; margin-bottom: 14px; }
+  @media (max-width: 720px) { .section h2 { font-size: 30px; } }
+  .section-lead { font-size: 16.5px; color: var(--muted); }
+
+  /* SERVICES */
+  .services { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+  @media (max-width: 1000px) { .services { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 640px) { .services { grid-template-columns: 1fr; } }
+  .service { background: var(--panel); border: 1px solid var(--line); border-radius: 6px; overflow: hidden; display: flex; flex-direction: column; }
+  .service .ph { aspect-ratio: 16 / 10; }
+  .service-body { padding: 26px 26px 28px; display: flex; flex-direction: column; flex: 1; }
+  .service h3 { font-size: 23px; margin-bottom: 8px; }
+  .service p { font-size: 14.5px; color: var(--muted); margin-bottom: 16px; }
+  .service ul { list-style: none; font-size: 14px; margin-bottom: 22px; }
+  .service li { padding: 6px 0 6px 22px; position: relative; border-top: 1px solid var(--line); }
+  .service li::before { content: ""; position: absolute; left: 2px; top: 14px; width: 9px; height: 9px; border-radius: 50%; background: var(--sky); }
+  .service-foot { margin-top: auto; display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; flex-wrap: wrap; }
+  .price { font-size: 13px; color: var(--muted); line-height: 1.2; }
+  .price strong { display: block; font-family: 'DM Serif Display', serif; font-weight: 400; font-size: 30px; color: var(--ink); }
+  .service-link { font-size: 14px; font-weight: 600; border-bottom: 2px solid var(--gold); padding-bottom: 2px; }
+  .service-link:hover { color: var(--gold); }
+  .addon { margin-top: 28px; padding: 24px 28px; border: 1px dashed var(--gold); border-radius: 6px; display: flex; justify-content: space-between; align-items: center; gap: 18px; flex-wrap: wrap; background: rgba(241, 221, 178, 0.25); }
+  .addon h3 { font-size: 21px; margin-bottom: 4px; }
+  .addon p { font-size: 14.5px; color: var(--muted); }
+  .price-note { margin-top: 18px; font-size: 13.5px; color: var(--muted); }
+
+  /* WORK */
+  .work { background: var(--ink); color: var(--paper); }
+  .work .section-lead { color: rgba(250, 246, 239, 0.7); }
+  .reels { display: grid; grid-template-columns: 1.4fr 1fr; gap: 24px; margin-bottom: 24px; }
+  @media (max-width: 860px) { .reels { grid-template-columns: 1fr; } }
+  .reel .ph { aspect-ratio: 16 / 9; border-radius: 6px; }
+  .reel p { margin-top: 10px; font-size: 14px; color: rgba(250, 246, 239, 0.7); }
+  .gallery { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+  @media (max-width: 860px) { .gallery { grid-template-columns: repeat(2, 1fr); } }
+  .gallery .ph { aspect-ratio: 1 / 1; border-radius: 4px; }
+  .gallery .tall { grid-row: span 2; aspect-ratio: auto; }
+
+  /* STEPS */
   .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
   @media (max-width: 900px) { .steps { grid-template-columns: 1fr; } }
-  .step { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 32px 28px; }
-  .step-num { font-family: 'DM Serif Display', serif; font-style: italic; font-size: 28px; color: var(--gold); margin-bottom: 16px; }
-  .step h3 { font-size: 19px; margin-bottom: 10px; }
-  .step p { font-size: 14.5px; color: var(--muted); }
+  .step { border-top: 3px solid var(--gold); padding-top: 24px; }
+  .step-num { font-family: 'DM Serif Display', serif; font-style: italic; font-size: 30px; color: var(--gold); margin-bottom: 10px; }
+  .step h3 { font-size: 21px; margin-bottom: 8px; }
+  .step p { font-size: 15px; color: var(--muted); }
 
-  .cta-section { background: linear-gradient(135deg, #F1DDB2, #D9A441 60%, #C9793E); padding: 90px 0; text-align: center; border-radius: 24px; margin: 0 40px; }
-  .cta-section h2 { font-size: 34px; max-width: 540px; margin: 0 auto 16px auto; color: var(--ink); }
-  .cta-section p { font-size: 15.5px; max-width: 420px; margin: 0 auto 30px auto; color: rgba(36,31,26,0.75); }
-  .cta-section .btn-primary { background: var(--ink); }
+  /* WHY */
+  .why { background: var(--panel); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  .why-grid { display: grid; grid-template-columns: 1fr 1.3fr; gap: 60px; align-items: start; }
+  @media (max-width: 900px) { .why-grid { grid-template-columns: 1fr; gap: 30px; } }
+  .why-list { display: grid; grid-template-columns: 1fr 1fr; gap: 30px 34px; }
+  @media (max-width: 600px) { .why-list { grid-template-columns: 1fr; } }
+  .why-item h3 { font-size: 20px; margin-bottom: 6px; }
+  .why-item p { font-size: 15px; color: var(--muted); }
 
-  footer { padding: 44px 0; }
+  /* FAQ */
+  .faq { max-width: 780px; }
+  details { border-bottom: 1px solid var(--line); padding: 20px 0; }
+  summary { cursor: pointer; font-family: 'DM Serif Display', serif; font-size: 20px; list-style: none; display: flex; justify-content: space-between; gap: 20px; }
+  summary::-webkit-details-marker { display: none; }
+  summary::after { content: "+"; font-family: 'DM Sans', sans-serif; color: var(--gold); font-size: 24px; line-height: 1; }
+  details[open] summary::after { content: "–"; }
+  details p { margin-top: 12px; font-size: 15px; color: var(--muted); max-width: 680px; }
+
+  /* CTA */
+  .cta { background: linear-gradient(135deg, var(--gold-soft), #D9A441 60%, #C9793E); padding: 90px 30px; text-align: center; border-radius: 10px; margin: 0 40px 40px; }
+  @media (max-width: 600px) { .cta { margin: 0 16px 30px; padding: 70px 22px; } }
+  .cta h2 { font-size: 38px; max-width: 600px; margin: 0 auto 16px; line-height: 1.15; }
+  .cta p { font-size: 16px; max-width: 460px; margin: 0 auto 30px; color: rgba(36,31,26,0.78); }
+
+  /* FOOTER */
+  footer { padding: 40px 0 50px; }
   footer .wrap { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 18px; }
-  .footer-logo { font-family: 'DM Serif Display', serif; font-size: 16px; }
-  .footer-links { display: flex; gap: 26px; font-size: 13px; color: var(--muted); }
+  .footer-meta { font-size: 13.5px; color: var(--muted); }
+  .footer-links { display: flex; gap: 26px; font-size: 13.5px; color: var(--muted); }
   .footer-links a:hover { color: var(--gold); }
 </style>
 </head>
@@ -89,74 +173,312 @@
 
 <nav>
   <div class="wrap">
-    <div class="nav-logo">Cobb Visual Media</div>
+    <a href="#top" class="brand" aria-label="Cobb Visual Media home">
+      <svg viewBox="80 70 230 270" aria-hidden="true">
+        <polygon fill="#C9963B" points="99.7,108.6 266.6,76.2 305.7,277.4 138.8,309.8"/>
+        <polygon fill="#C9963B" points="129.7,104.0 316.7,123.6 294.6,333.5 107.6,313.9"/>
+        <polygon fill="#FFFDF8" points="134.9,110.0 309.9,128.4 288.9,327.3 113.9,308.9"/>
+        <polygon fill="#8EC1DE" points="151.5,127.7 296.7,143.0 281.6,286.2 136.4,270.9"/>
+        <polygon fill="#FFFDF8" points="196.0,180.0 248.5,212.0 190.2,235.6"/>
+      </svg>
+      <span class="brand-name">Cobb<small>Visual Media</small></span>
+    </a>
     <div class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#work">Our Work</a>
       <a href="#how-it-works">How It Works</a>
-      <a href="quote.html">Contact</a>
+      <a href="#faq">FAQ</a>
     </div>
     <a href="quote.html" class="nav-cta">Get a Quote</a>
   </div>
 </nav>
 
-<header class="hero">
-  <div class="wrap hero-grid">
+<header class="hero" id="top">
+  <div class="wrap">
     <div>
-      <h1>Property videos that feel like real life.</h1>
-      <p class="lead">Warm, cinematic walkthroughs for short-term rentals, commercial spaces, and boutique hospitality — using your existing photos, or ours.</p>
-      <div class="hero-cta-row">
+      <p class="hero-kicker">Holt, Lansing &amp; Mid-Michigan</p>
+      <h1>Video that makes people want to be there.</h1>
+      <p class="lead">Cinematic video for properties, businesses, venues, golf courses, and events. We film on-site or build your video from the photos you already have, then deliver it ready for your website, listings, and social.</p>
+      <div class="cta-row">
         <a href="quote.html" class="btn-primary">Get a Quote</a>
-        <a href="#how-it-works" class="btn-ghost">See How It Works</a>
+        <a href="#work" class="btn-ghost">See Our Work</a>
       </div>
+      <p class="hero-price">Packages starting at <strong>$600</strong></p>
+    </div>
+    <div class="collage" aria-hidden="true">
+      <div class="snap snap-1"><div class="ph"><img src="images/hero-1.jpg" alt="" onerror="this.remove()"></div><span>The arrival</span></div>
+      <div class="snap snap-2"><div class="ph"><img src="images/hero-2.jpg" alt="" onerror="this.remove()"></div><span>Golden hour</span></div>
+      <div class="snap snap-3"><div class="ph"><img src="images/hero-3.jpg" alt="" onerror="this.remove()"></div><span>The main event</span></div>
     </div>
   </div>
 </header>
 
-<div class="trust-strip">
+<div class="strip">
   <div class="wrap">
-    <span>Short-Term Rentals</span>
+    <span>Homes &amp; Rentals</span>
     <span>Commercial Real Estate</span>
-    <span>Boutique Hospitality</span>
-    <span>Wedding Venues</span>
+    <span>Restaurants &amp; Retail</span>
+    <span>Boutique Hotels</span>
+    <span>Wedding &amp; Event Venues</span>
+    <span>Golf Courses</span>
+    <span>Sports &amp; Events</span>
   </div>
 </div>
+
+<section class="section" id="services">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Services built around what you're showing off.</h2>
+      <p class="section-lead">Every package is custom-edited for your space or event. Pick the closest fit and we'll tailor the quote from there.</p>
+    </div>
+
+    <div class="services">
+      <article class="service">
+        <div class="ph"><img src="images/service-property.jpg" alt="Cinematic property walkthrough video still" onerror="this.remove()"></div>
+        <div class="service-body">
+          <h3>Property Walkthroughs</h3>
+          <p>A flowing, room-to-room tour that lets buyers and guests feel the space before they visit.</p>
+          <ul>
+            <li>Homes, listings &amp; short-term rentals</li>
+            <li>On-site filming or built from your photos</li>
+            <li>Licensed music &amp; color grading</li>
+          </ul>
+          <div class="service-foot">
+            <div class="price">Starting at<strong>$600</strong></div>
+            <a href="quote.html?service=property" class="service-link">Request a Quote</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="service">
+        <div class="ph"><img src="images/service-commercial.jpg" alt="Commercial business promotional video still" onerror="this.remove()"></div>
+        <div class="service-body">
+          <h3>Commercial &amp; Business</h3>
+          <p>Promo and space videos that show customers and tenants exactly why they should walk in your door.</p>
+          <ul>
+            <li>Offices, retail, restaurants &amp; studios</li>
+            <li>Commercial real estate &amp; leasing</li>
+            <li>Brand and website hero videos</li>
+          </ul>
+          <div class="service-foot">
+            <div class="price">Starting at<strong>$800</strong></div>
+            <a href="quote.html?service=commercial" class="service-link">Request a Quote</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="service">
+        <div class="ph"><img src="images/service-venue.jpg" alt="Wedding and event venue video still" onerror="this.remove()"></div>
+        <div class="service-body">
+          <h3>Venues &amp; Hospitality</h3>
+          <p>Show couples, planners, and guests the full experience, from the entrance to the last dance.</p>
+          <ul>
+            <li>Boutique hotels &amp; inns</li>
+            <li>Wedding and event venues</li>
+            <li>Indoor and outdoor spaces</li>
+          </ul>
+          <div class="service-foot">
+            <div class="price">Starting at<strong>$900</strong></div>
+            <a href="quote.html?service=venue" class="service-link">Request a Quote</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="service">
+        <div class="ph"><img src="images/service-golf.jpg" alt="Golf course promotional video still" onerror="this.remove()"></div>
+        <div class="service-body">
+          <h3>Golf Courses &amp; Recreation</h3>
+          <p>Hole-by-hole flyovers, clubhouse features, and promo films for courses, clubs, and resorts.</p>
+          <ul>
+            <li>Course tours &amp; signature holes</li>
+            <li>Clubhouse, dining &amp; event spaces</li>
+            <li>Membership and booking promos</li>
+          </ul>
+          <div class="service-foot">
+            <div class="price">Starting at<strong>$1,200</strong></div>
+            <a href="quote.html?service=golf" class="service-link">Request a Quote</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="service">
+        <div class="ph"><img src="images/service-sports.jpg" alt="Sports and event highlight video still" onerror="this.remove()"></div>
+        <div class="service-body">
+          <h3>Sports &amp; Event Highlights</h3>
+          <p>High-energy highlight reels that capture the moments people will want to share.</p>
+          <ul>
+            <li>Games, tournaments &amp; meets</li>
+            <li>Community and corporate events</li>
+            <li>Fundraisers &amp; festivals</li>
+          </ul>
+          <div class="service-foot">
+            <div class="price">Starting at<strong>$600</strong></div>
+            <a href="quote.html?service=sports" class="service-link">Request a Quote</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="service">
+        <div class="ph"><img src="images/service-custom.jpg" alt="Custom video project still" onerror="this.remove()"></div>
+        <div class="service-body">
+          <h3>Something Else?</h3>
+          <p>Have a project that doesn't fit a box? Tell us what you're picturing and we'll build a package around it.</p>
+          <ul>
+            <li>Custom scope &amp; deliverables</li>
+            <li>Multi-video and recurring work</li>
+            <li>Quoted to your project</li>
+          </ul>
+          <div class="service-foot">
+            <div class="price">Pricing<strong>Custom</strong></div>
+            <a href="quote.html?service=other" class="service-link">Request a Quote</a>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <div class="addon">
+      <div>
+        <h3>Add Social Media Reels</h3>
+        <p>Short vertical cuts of any video, sized for Instagram, TikTok, Facebook, and YouTube Shorts.</p>
+      </div>
+      <div class="price">Starting at<strong>$150</strong></div>
+    </div>
+    <p class="price-note">Final pricing depends on property or event size, length, and deliverables. You'll get a firm quote before anything is booked.</p>
+  </div>
+</section>
+
+<section class="section work" id="work">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Recent work.</h2>
+      <p class="section-lead">A look at the spaces and moments we've brought to life.</p>
+    </div>
+
+    <div class="reels">
+      <div class="reel">
+        <div class="ph">
+          <video controls preload="metadata" poster="images/reel-1-poster.jpg" playsinline>
+            <source src="videos/reel-1.mp4" type="video/mp4" onerror="this.parentElement.remove()">
+          </video>
+        </div>
+        <p>Featured project</p>
+      </div>
+      <div class="reel">
+        <div class="ph">
+          <video controls preload="metadata" poster="images/reel-2-poster.jpg" playsinline>
+            <source src="videos/reel-2.mp4" type="video/mp4" onerror="this.parentElement.remove()">
+          </video>
+        </div>
+        <p>Featured project</p>
+      </div>
+    </div>
+
+    <div class="gallery">
+      <div class="ph tall"><img src="images/work-1.jpg" alt="Cobb Visual Media project photo" loading="lazy" onerror="this.remove()"></div>
+      <div class="ph"><img src="images/work-2.jpg" alt="Cobb Visual Media project photo" loading="lazy" onerror="this.remove()"></div>
+      <div class="ph"><img src="images/work-3.jpg" alt="Cobb Visual Media project photo" loading="lazy" onerror="this.remove()"></div>
+      <div class="ph tall"><img src="images/work-4.jpg" alt="Cobb Visual Media project photo" loading="lazy" onerror="this.remove()"></div>
+      <div class="ph"><img src="images/work-5.jpg" alt="Cobb Visual Media project photo" loading="lazy" onerror="this.remove()"></div>
+      <div class="ph"><img src="images/work-6.jpg" alt="Cobb Visual Media project photo" loading="lazy" onerror="this.remove()"></div>
+    </div>
+  </div>
+</section>
 
 <section class="section" id="how-it-works">
   <div class="wrap">
     <div class="section-head">
-      <h2>From photos to a finished video.</h2>
-      <p class="section-lead">Use the images you already have, or let us come shoot the property for you.</p>
+      <h2>How it works.</h2>
+      <p class="section-lead">Simple from first message to final file.</p>
     </div>
     <div class="steps">
       <div class="step">
         <div class="step-num">01</div>
-        <h3>Send your photos, or we'll shoot them</h3>
-        <p>Have photos already? We'll work with what you've got. Need them taken? We can come shoot the property ourselves.</p>
+        <h3>Tell us about the project</h3>
+        <p>Fill out the quote form with your property, business, or event details. We'll reply with a firm quote and a plan.</p>
       </div>
       <div class="step">
         <div class="step-num">02</div>
-        <h3>We bring it to life</h3>
-        <p>Warm, natural movement and pacing turn your stills into a flowing walkthrough that feels like a real visit, not a slideshow.</p>
+        <h3>We film, or work from your photos</h3>
+        <p>We come out and shoot on-site, or build a flowing, cinematic video from the images you already have.</p>
       </div>
       <div class="step">
         <div class="step-num">03</div>
         <h3>Delivered ready to use</h3>
-        <p>Your finished video, delivered in the format you need — for listings, decks, or social.</p>
+        <p>Your finished video arrives in the formats you need for your website, listings, presentations, and social.</p>
       </div>
     </div>
   </div>
 </section>
 
-<section class="cta-section">
-  <div class="wrap">
-    <h2>Ready to see your property in motion?</h2>
-    <p>Send over your photos and property type, and we'll get back to you with next steps.</p>
-    <a href="quote.html" class="btn-primary">Get a Quote</a>
+<section class="section why">
+  <div class="wrap why-grid">
+    <div>
+      <h2>Why Cobb Visual Media.</h2>
+      <p class="section-lead">Big-studio polish without the big-studio runaround.</p>
+    </div>
+    <div class="why-list">
+      <div class="why-item">
+        <h3>Local to Mid-Michigan</h3>
+        <p>Based in Holt and serving Lansing, East Lansing, and the surrounding area.</p>
+      </div>
+      <div class="why-item">
+        <h3>Cinematic, not cookie-cutter</h3>
+        <p>Real pacing, natural movement, and color that feels like being there, not a slideshow.</p>
+      </div>
+      <div class="why-item">
+        <h3>Flexible from the start</h3>
+        <p>On-site filming or your existing photos. Whatever gets you the best result for your budget.</p>
+      </div>
+      <div class="why-item">
+        <h3>Clear pricing</h3>
+        <p>Starting prices up front and a firm quote before you commit. No surprise invoices.</p>
+      </div>
+    </div>
   </div>
+</section>
+
+<section class="section" id="faq">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Questions, answered.</h2>
+    </div>
+    <div class="faq">
+      <details>
+        <summary>What does "starting at" mean?</summary>
+        <p>It's the base price for that type of project. Your final quote depends on the size of the property or event, video length, and any add-ons like social reels. You'll always get a firm number before anything is booked.</p>
+      </details>
+      <details>
+        <summary>Do you need to come on-site?</summary>
+        <p>Not always. We can film on-site, or create your video from photos you already have. The quote form lets you tell us which works best.</p>
+      </details>
+      <details>
+        <summary>What formats will I get?</summary>
+        <p>Your video is delivered ready for your website, listing platforms, and presentations. Add social media reels to get vertical versions sized for Instagram, TikTok, Facebook, and YouTube Shorts.</p>
+      </details>
+      <details>
+        <summary>How does payment work?</summary>
+        <p>Once you approve your quote, we send a secure payment link for that exact amount. There's no charge until you approve.</p>
+      </details>
+      <details>
+        <summary>What kinds of projects do you take on?</summary>
+        <p>Homes and rentals, commercial spaces, restaurants and retail, hotels, wedding and event venues, golf courses, and sports and community events. If you're not sure your project fits, send a request and ask.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <h2>Ready to see it in motion?</h2>
+  <p>Tell us about your space or event and we'll send a quote with next steps.</p>
+  <a href="quote.html" class="btn-primary">Get a Quote</a>
 </section>
 
 <footer>
   <div class="wrap">
-    <div class="footer-logo">Cobb Visual Media</div>
+    <div>
+      <div class="brand-name">Cobb<small>Visual Media</small></div>
+    </div>
+    <div class="footer-meta">Holt, MI &nbsp;|&nbsp; Serving Lansing &amp; Mid-Michigan</div>
     <div class="footer-links">
       <a href="quote.html">Contact</a>
       <a href="terms.html">Terms</a>
