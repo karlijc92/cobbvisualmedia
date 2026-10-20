@@ -5,12 +5,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Cobb Visual Media | Cinematic Video for Properties, Businesses, Venues & Events | Holt & Lansing, MI</title>
 <meta name="description" content="Cinematic video production in Holt, Lansing, and Mid-Michigan. Property walkthroughs, commercial and business video, venues, golf courses, and sports and event highlights. Packages starting at $600.">
+<meta property="og:title" content="Cobb Visual Media | Cinematic Video in Mid-Michigan">
+<meta property="og:description" content="Cinematic video for properties, businesses, venues, golf courses, and events. Packages starting at $600.">
+<meta property="og:image" content="https://www.cobbvisualmedia.com/images/hero-2.jpg">
+<meta property="og:type" content="website">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   "name": "Cobb Visual Media",
   "url": "https://www.cobbvisualmedia.com",
+  "image": "https://www.cobbvisualmedia.com/images/hero-2.jpg",
   "description": "Cinematic video for properties, businesses, venues, golf courses, and events.",
   "address": { "@type": "PostalAddress", "addressLocality": "Holt", "addressRegion": "MI", "addressCountry": "US" },
   "areaServed": ["Holt, MI", "Lansing, MI", "East Lansing, MI", "Mid-Michigan"],
@@ -43,9 +48,11 @@
   h1, h2, h3 { font-family: 'DM Serif Display', serif; font-weight: 400; letter-spacing: -0.3px; }
   a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; border-radius: 6px; }
 
-  /* Image placeholders: show a warm gradient until real photos are added */
+  /* Image frames: warm gradient shows if an image is missing */
   .ph { position: relative; overflow: hidden; background: linear-gradient(135deg, var(--gold-soft), var(--sky) 120%); }
   .ph img, .ph video { width: 100%; height: 100%; object-fit: cover; }
+  .ph img { transition: transform 0.6s ease; }
+  .service:hover .ph img, .gallery .ph:hover img { transform: scale(1.04); }
 
   /* NAV */
   nav { position: sticky; top: 0; z-index: 100; background: rgba(250, 246, 239, 0.94); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
@@ -128,6 +135,7 @@
   @media (max-width: 860px) { .gallery { grid-template-columns: repeat(2, 1fr); } }
   .gallery .ph { aspect-ratio: 1 / 1; border-radius: 4px; }
   .gallery .tall { grid-row: span 2; aspect-ratio: auto; }
+  .gallery-note { margin-top: 18px; font-size: 13px; color: rgba(250, 246, 239, 0.55); }
 
   /* STEPS */
   .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
@@ -206,9 +214,9 @@
       <p class="hero-price">Packages starting at <strong>$600</strong></p>
     </div>
     <div class="collage" aria-hidden="true">
-      <div class="snap snap-1"><div class="ph"><img src="images/hero-1.jpg" alt="" onerror="this.remove()"></div><span>The arrival</span></div>
-      <div class="snap snap-2"><div class="ph"><img src="images/hero-2.jpg" alt="" onerror="this.remove()"></div><span>Golden hour</span></div>
-      <div class="snap snap-3"><div class="ph"><img src="images/hero-3.jpg" alt="" onerror="this.remove()"></div><span>The main event</span></div>
+      <div class="snap snap-1"><div class="ph"><img src="images/hero-1.jpg" alt="" fetchpriority="high" onerror="this.remove()"></div><span>The arrival</span></div>
+      <div class="snap snap-2"><div class="ph"><img src="images/hero-2.jpg" alt="" fetchpriority="high" onerror="this.remove()"></div><span>Golden hour</span></div>
+      <div class="snap snap-3"><div class="ph"><img src="images/hero-3.jpg" alt="" fetchpriority="high" onerror="this.remove()"></div><span>The main event</span></div>
     </div>
   </div>
 </header>
@@ -234,7 +242,7 @@
 
     <div class="services">
       <article class="service">
-        <div class="ph"><img src="images/service-property.jpg" alt="Cinematic property walkthrough video still" onerror="this.remove()"></div>
+        <div class="ph"><img src="images/service-property.jpg" alt="Sunlit dining space with wood tables and copper pendant lights" loading="lazy" onerror="this.remove()"></div>
         <div class="service-body">
           <h3>Property Walkthroughs</h3>
           <p>A flowing, room-to-room tour that lets buyers and guests feel the space before they visit.</p>
@@ -251,7 +259,7 @@
       </article>
 
       <article class="service">
-        <div class="ph"><img src="images/service-commercial.jpg" alt="Commercial business promotional video still" onerror="this.remove()"></div>
+        <div class="ph"><img src="images/service-commercial.jpg" alt="Barista working an espresso machine in a bright coffee shop" loading="lazy" onerror="this.remove()"></div>
         <div class="service-body">
           <h3>Commercial &amp; Business</h3>
           <p>Promo and space videos that show customers and tenants exactly why they should walk in your door.</p>
@@ -268,7 +276,7 @@
       </article>
 
       <article class="service">
-        <div class="ph"><img src="images/service-venue.jpg" alt="Wedding and event venue video still" onerror="this.remove()"></div>
+        <div class="ph"><img src="images/service-venue.jpg" alt="Restaurant dining room with tall arched windows and afternoon light" loading="lazy" onerror="this.remove()"></div>
         <div class="service-body">
           <h3>Venues &amp; Hospitality</h3>
           <p>Show couples, planners, and guests the full experience, from the entrance to the last dance.</p>
@@ -285,7 +293,7 @@
       </article>
 
       <article class="service">
-        <div class="ph"><img src="images/service-golf.jpg" alt="Golf course promotional video still" onerror="this.remove()"></div>
+        <div class="ph"><img src="images/service-golf.jpg" alt="Golf green beside a pond at sunrise" loading="lazy" onerror="this.remove()"></div>
         <div class="service-body">
           <h3>Golf Courses &amp; Recreation</h3>
           <p>Hole-by-hole flyovers, clubhouse features, and promo films for courses, clubs, and resorts.</p>
@@ -302,7 +310,7 @@
       </article>
 
       <article class="service">
-        <div class="ph"><img src="images/service-sports.jpg" alt="Sports and event highlight video still" onerror="this.remove()"></div>
+        <div class="ph"><img src="images/service-sports.jpg" alt="Packed stadium under the lights during a night game" loading="lazy" onerror="this.remove()"></div>
         <div class="service-body">
           <h3>Sports &amp; Event Highlights</h3>
           <p>High-energy highlight reels that capture the moments people will want to share.</p>
@@ -319,7 +327,7 @@
       </article>
 
       <article class="service">
-        <div class="ph"><img src="images/service-custom.jpg" alt="Custom video project still" onerror="this.remove()"></div>
+        <div class="ph"><img src="images/service-custom.jpg" alt="Videographer with a gimbal camera and drone filming at sunset" loading="lazy" onerror="this.remove()"></div>
         <div class="service-body">
           <h3>Something Else?</h3>
           <p>Have a project that doesn't fit a box? Tell us what you're picturing and we'll build a package around it.</p>
@@ -350,8 +358,8 @@
 <section class="section work" id="work">
   <div class="wrap">
     <div class="section-head">
-      <h2>Recent work.</h2>
-      <p class="section-lead">A look at the spaces and moments we've brought to life.</p>
+      <h2>The look we bring.</h2>
+      <p class="section-lead">Warm light, natural movement, and spaces that feel alive. Here's the style we deliver for properties, businesses, and events.</p>
     </div>
 
     <div class="reels">
@@ -361,7 +369,7 @@
             <source src="videos/reel-1.mp4" type="video/mp4" onerror="this.parentElement.remove()">
           </video>
         </div>
-        <p>Featured project</p>
+        <p>Golf &amp; recreation</p>
       </div>
       <div class="reel">
         <div class="ph">
@@ -369,18 +377,19 @@
             <source src="videos/reel-2.mp4" type="video/mp4" onerror="this.parentElement.remove()">
           </video>
         </div>
-        <p>Featured project</p>
+        <p>Retail &amp; business</p>
       </div>
     </div>
 
     <div class="gallery">
-      <div class="ph tall"><img src="images/work-1.jpg" alt="Cobb Visual Media project photo" loading="lazy" onerror="this.remove()"></div>
-      <div class="ph"><img src="images/work-2.jpg" alt="Cobb Visual Media project photo" loading="lazy" onerror="this.remove()"></div>
-      <div class="ph"><img src="images/work-3.jpg" alt="Cobb Visual Media project photo" loading="lazy" onerror="this.remove()"></div>
-      <div class="ph tall"><img src="images/work-4.jpg" alt="Cobb Visual Media project photo" loading="lazy" onerror="this.remove()"></div>
-      <div class="ph"><img src="images/work-5.jpg" alt="Cobb Visual Media project photo" loading="lazy" onerror="this.remove()"></div>
-      <div class="ph"><img src="images/work-6.jpg" alt="Cobb Visual Media project photo" loading="lazy" onerror="this.remove()"></div>
+      <div class="ph tall"><img src="images/work-1.jpg" alt="Tattoo artist at work in a studio" loading="lazy" onerror="this.remove()"></div>
+      <div class="ph"><img src="images/work-2.jpg" alt="Studio workstation with ink bottles and equipment" loading="lazy" onerror="this.remove()"></div>
+      <div class="ph"><img src="images/work-3.jpg" alt="Private studio suite with warm accent lighting" loading="lazy" onerror="this.remove()"></div>
+      <div class="ph tall"><img src="images/work-4.jpg" alt="Hotel lobby with marble floors and lounge seating" loading="lazy" onerror="this.remove()"></div>
+      <div class="ph"><img src="images/work-5.jpg" alt="Modern glass office building at sunset" loading="lazy" onerror="this.remove()"></div>
+      <div class="ph"><img src="images/work-6.jpg" alt="Activewear boutique with mannequins and shelving" loading="lazy" onerror="this.remove()"></div>
     </div>
+    <p class="gallery-note">Images shown are style samples. Client projects coming soon.</p>
   </div>
 </section>
 
