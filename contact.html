@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | Cobb Visual Media</title>
+<meta name="description" content="Questions for Cobb Visual Media? Send us a message and we'll get back to you.">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@400;500;600;700&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --paper: #FAF6EF;
+    --panel: #FFFFFF;
+    --ink: #241F1A;
+    --gold: #C9963B;
+    --gold-soft: #F1DDB2;
+    --sky: #8EC1DE;
+    --sky-deep: #5B84A6;
+    --line: rgba(36, 31, 26, 0.14);
+    --muted: #6B6259;
+  }
+
+  body { background: var(--paper); color: var(--ink); font-family: 'DM Sans', sans-serif; line-height: 1.65; }
+  a { color: inherit; text-decoration: none; }
+  .wrap { max-width: 1180px; margin: 0 auto; padding: 0 40px; }
+  @media (max-width: 600px) { .wrap { padding: 0 22px; } }
+  h1, h2 { font-family: 'DM Serif Display', serif; font-weight: 400; letter-spacing: -0.3px; }
+  a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+
+  /* NAV */
+  nav { position: sticky; top: 0; z-index: 100; background: rgba(250, 246, 239, 0.94); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
+  nav .wrap { display: flex; align-items: center; justify-content: space-between; padding: 18px 40px; }
+  .brand { display: flex; align-items: center; gap: 12px; }
+  .brand svg { width: 38px; height: 38px; }
+  .brand-name { font-family: 'DM Serif Display', serif; font-size: 21px; line-height: 1; }
+  .brand-name small { display: block; font-family: 'DM Sans', sans-serif; font-size: 11.5px; color: var(--gold); font-weight: 600; letter-spacing: 1px; margin-top: 4px; }
+  .nav-cta { background: var(--ink); color: var(--paper); padding: 11px 22px; border-radius: 30px; font-size: 14px; font-weight: 600; }
+
+  /* CONTACT */
+  .contact { padding: 80px 0 100px; }
+  .contact .wrap { display: grid; grid-template-columns: 1fr 1.2fr; gap: 70px; align-items: start; }
+  @media (max-width: 900px) { .contact .wrap { grid-template-columns: 1fr; gap: 40px; } }
+  .kicker { font-size: 14px; color: var(--sky-deep); font-weight: 600; margin-bottom: 16px; }
+  .contact h1 { font-size: 48px; line-height: 1.1; margin-bottom: 20px; }
+  @media (max-width: 720px) { .contact h1 { font-size: 36px; } }
+  .intro { font-size: 17px; color: var(--muted); margin-bottom: 24px; max-width: 440px; }
+  .side-note { font-size: 15px; color: var(--muted); border-top: 1px solid var(--line); padding-top: 22px; max-width: 440px; }
+  .side-note a { color: var(--ink); font-weight: 600; border-bottom: 2px solid var(--gold); }
+
+  .card { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 40px; }
+  @media (max-width: 600px) { .card { padding: 28px 22px; } }
+  .field { margin-bottom: 22px; }
+  label { display: block; font-size: 14px; font-weight: 600; margin-bottom: 8px; }
+  input, textarea { width: 100%; font-family: inherit; font-size: 15px; color: var(--ink); background: var(--paper); border: 1px solid var(--line); border-radius: 6px; padding: 13px 15px; }
+  input:focus, textarea:focus { border-color: var(--gold); }
+  textarea { min-height: 160px; resize: vertical; }
+  .honey { position: absolute; left: -9999px; }
+  button { background: var(--ink); color: var(--paper); border: none; padding: 15px 30px; border-radius: 30px; font-family: inherit; font-weight: 600; font-size: 15px; cursor: pointer; }
+  button:hover { opacity: 0.88; }
+
+  .thanks { display: none; text-align: center; padding: 30px 10px; }
+  .thanks h2 { font-size: 30px; margin-bottom: 10px; }
+  .thanks p { color: var(--muted); font-size: 16px; }
+  .sent .thanks { display: block; }
+  .sent form { display: none; }
+
+  /* FOOTER */
+  footer { padding: 40px 0 50px; border-top: 1px solid var(--line); }
+  footer .wrap { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 18px; }
+  .footer-meta { font-size: 13.5px; color: var(--muted); }
+  .footer-links { display: flex; gap: 26px; font-size: 13.5px; color: var(--muted); }
+  .footer-links a:hover { color: var(--gold); }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a href="index.html" class="brand" aria-label="Cobb Visual Media home">
+      <svg viewBox="80 70 230 270" aria-hidden="true">
+        <polygon fill="#C9963B" points="99.7,108.6 266.6,76.2 305.7,277.4 138.8,309.8"/>
+        <polygon fill="#C9963B" points="129.7,104.0 316.7,123.6 294.6,333.5 107.6,313.9"/>
+        <polygon fill="#FFFDF8" points="134.9,110.0 309.9,128.4 288.9,327.3 113.9,308.9"/>
+        <polygon fill="#8EC1DE" points="151.5,127.7 296.7,143.0 281.6,286.2 136.4,270.9"/>
+        <polygon fill="#FFFDF8" points="196.0,180.0 248.5,212.0 190.2,235.6"/>
+      </svg>
+      <span class="brand-name">Cobb<small>Visual Media</small></span>
+    </a>
+    <a href="quote.html" class="nav-cta">Get a Quote</a>
+  </div>
+</nav>
+
+<main class="contact">
+  <div class="wrap">
+    <div>
+      <p class="kicker">Get in touch</p>
+      <h1>Have a question? Send us a message.</h1>
+      <p class="intro">Questions about our terms, privacy, your information, or anything else. We'll get back to you as soon as we can.</p>
+      <p class="side-note">Looking to book a project? Use the <a href="quote.html">quote form</a> instead so we have all your project details.</p>
+    </div>
+
+    <div class="card" id="card">
+      <form action="https://formsubmit.co/karlicobb@cobbvisualmedia.com" method="POST">
+        <input type="hidden" name="_subject" value="New contact message - Cobb Visual Media">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="https://www.cobbvisualmedia.com/contact.html?sent=1">
+        <input type="text" name="_honey" class="honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+        <div class="field">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required autocomplete="name">
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required autocomplete="email">
+        </div>
+        <div class="field">
+          <label for="topic">Subject</label>
+          <input type="text" id="topic" name="topic" placeholder="Terms, privacy, general question...">
+        </div>
+        <div class="field">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" required></textarea>
+        </div>
+        <button type="submit">Send Message</button>
+      </form>
+
+      <div class="thanks" role="status">
+        <h2>Message sent.</h2>
+        <p>Thanks for reaching out. We'll reply to the email you provided.</p>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="brand-name">Cobb<small>Visual Media</small></div>
+    <div class="footer-meta">Serving clients nationwide</div>
+    <div class="footer-links">
+      <a href="contact.html">Contact</a>
+      <a href="terms.html">Terms</a>
+      <a href="privacy.html">Privacy</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  if (new URLSearchParams(location.search).get('sent') === '1') {
+    document.getElementById('card').classList.add('sent');
+  }
+</script>
+
+</body>
+</html>
